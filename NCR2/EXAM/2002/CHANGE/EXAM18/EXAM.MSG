@@ -1,0 +1,16 @@
+A#include <stdio.h>
+A#include <conio.h>
+Lvoid fun(int a, b)
+Hvoid fun(int *a, int *b)
+A { int t;
+L   t = b; b = a; a = t;
+H   t = *b; *b = *a; *a = t;
+A }
+A
+Amain()
+A { int  a, b;
+A   clrscr();
+A   printf("Enter a, b:");  scanf("%d%d", &a, &b);
+A   fun(&a, &b);
+A   printf("a=%d  b=%d\n", a, b);
+A }

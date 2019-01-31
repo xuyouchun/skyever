@@ -1,0 +1,19 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Adouble fun(int m)
+A { double y = 1.0;
+A   int i;
+L   for(i=2; i<m; i++)
+H   for(i=2; i<=m; i++)
+L     y -= 1/(i*i);
+H     y -= 1.0/(i*i);
+A   return (y);
+A }
+A
+Amain()
+A { int n = 5;
+A   clrscr();
+A   printf("\nThe resule is %lf\n", fun(n));
+A }
+A

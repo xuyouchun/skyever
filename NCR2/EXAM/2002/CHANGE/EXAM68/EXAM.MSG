@@ -1,0 +1,22 @@
+A#include <math.h>
+A
+Aint fun(int a, int b, int c)
+A { if(a+b>c && b+c>a && c+a>b)
+A    { if(a==b && b==c)
+L         return 1;
+H         return 3;
+A      else if(a==b || b==c || c==a)
+A         return 2;
+L      else return 3;
+H      else return 1;
+A    }
+A   else return 0;
+A }
+A
+Amain()
+A { int a, b, c, shape;
+A   printf("\nInput a, b, c:  ");  scanf("%d%d%d", &a, &b, &c);
+A   printf("\na = %d,  b = %d,  c = %d\n", a, b, c);
+A   shape = fun(a, b, c);
+A   printf("\n\nThe shape : %d\n", shape);
+A }

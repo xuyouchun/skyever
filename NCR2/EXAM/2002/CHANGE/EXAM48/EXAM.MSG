@@ -1,0 +1,25 @@
+A#include <stido.h>
+A#include <string.h>
+A#define   N  5
+A#define   M  81
+A
+Lfun(char (*sq)[N])
+Hchar *fun(char (*sq)[N])
+A { int i;  char *sp;
+A   sp = sq[0];
+A   for(i=0; i<N; i++)
+A     if(strlen(sp)<strlen(sq[i]))
+A       sp = sq[i];
+L  return sq;
+H  return sp;
+A }
+A
+Amain()
+A { char str[N][M], *longest; int i;
+A   printf("Enter %d lines :\n", N);
+A   for(i=0; i<N; i++)  gets(str[i]);
+A   printf("\nThe N string  :\n", N);
+A   for(i=0; i<N; i++)  puts(str[i]);
+A   longest = fun(str);
+A   printf("\nThe longest string :\n");  puts(longest);
+A }

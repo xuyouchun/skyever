@@ -1,0 +1,19 @@
+A#include <stdio.h>
+A#include <math.h>
+A
+Adouble fun(double eps)
+A {
+H   double x=1.0, d=1.0;
+H   double K=1;
+H   do
+H    { d *= K/(2*K+1);   K = K+1;
+H      x += d;
+H    } while(d>eps);
+H   return x * 2;
+A }
+A
+Amain()
+A { double x;
+A   printf("Input eps:");
+A   scanf("%lf", &x); printf("\neps = %lf, PI = %lf\n", x, fun(x));
+A }

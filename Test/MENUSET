@@ -1,0 +1,64 @@
+/T个人自我测定系统
+/X性格、脾性、气质测定
+  />/X你属于哪一类性格(一)/Fexam\exam1-1.txt
+    /X你属于哪一类性格(二)/Fexam\exam1-2.txt
+    /X你属于哪一类性格(三)/Fexam\exam1-3.txt
+    /X如何判断一个人的性格(一)/Fexam\exam1-4.txt
+    /X如何判断一个人的性格(二)/Fexam\exam1-5.txt
+    /X你的脾气如何/Fexam\exam1-6.txt
+    /X你乐观吗/Fexam\exam1-7.txt
+    /X你是个冒失鬼吗/Fexam\exam1-8.txt
+    /X你敏感吗/Fexam\exam1-9.txt
+    /X你是个十足的男子汉吗/Fexam\exam1-10.txt
+    /X你有男子汉气质吗/Fexam\exam1-11.txt
+    /X你属于哪一种气质/Fexam\exam1-12.txt
+  /<
+
+/X创造力、记忆力、应变力测定
+  />/X你有创造力吗(一)/Fexam\exam2-1.txt
+    /X你有创造力吗(二)/Fexam\exam2-2.txt
+    /X你有独创力和思考力吗/Fexam\exam2-3.txt
+    /X测测你的推理能力/Fexam\exam2-4.txt
+    /X记忆力测验(一)/Fexam\exam2-5.txt
+    /X记忆力测验(二)/Fexam\exam2-6.txt
+    /X你能急中生智吗/Fexam\exam2-7.txt
+    /X你聪明吗/Fexam\exam2-8.txt
+    /X试试你的侦探能力/Fexam\exam2-9.txt
+  /<
+/X兴趣、爱好与职业的测定
+  />/X青少年怎样选择最理想的志愿/Fexam\exam3-1.txt
+    /X你适合于哪一种职业/Fexam\exam3-2.txt
+    /X你的职业兴趣如何/Fexam\exam3-3.txt
+    /X你是否称职/Fexam\exam3-4.txt
+  /<
+/X社交能力测定
+  />/X你有社交能力吗/Fexam\exam4-1.txt
+    /X你有吸引朋友的力量吗/Fexam\exam4-2.txt
+    /X你受人喜欢吗(一)/Fexam\exam4-3.txt
+    /X你受人喜欢吗(二)/Fexam\exam4-4.txt
+    /X你受人喜欢吗(三)/Fexam\exam4-5.txt
+    /X你的说服力如何/Fexam\exam4-6.txt
+    /X你老练吗/Fexam\exam4-7.txt
+    /X你的"疏离感"如何/Fexam\exam4-8.txt
+  /<
+/X家庭、婚姻、恋爱测定
+  />/X你家庭里存在"代沟"吗/Fexam\exam5-1.txt
+    /X你是个合格的恋人吗/Fexam\exam5-2.txt
+    /X你选对对象了吗/Fexam\exam5-3.txt
+    /X你真的在恋爱吗/Fexam\exam5-4.txt
+    /X你了解男人吗/Fexam\exam5-5.txt
+  /<
+/X审美观、仪态测定
+  />/X测测你的审美观/Fexam\exam6-1.txt
+    /X仪态的自我测验/Fexam\exam6-2.txt
+  /<
+/X生理、心理及生活常识测定
+  />/X生理、心理及生活常识测定/Fexam\exam7-1.txt
+    /X你的心理健康吗/Fexam\exam7-2.txt
+    /X你需要接受心理治疗吗/Fexam\exam7-3.txt
+    /X你长大了吗/Fexam\exam7-4.txt
+    /X睡眠知识测验/Fexam\exam7-5.txt
+    /X营养知识测验/Fexam\exam7-6.txt
+    /X天气常识测验/Fexam\exam7-7.txt
+  /<
+

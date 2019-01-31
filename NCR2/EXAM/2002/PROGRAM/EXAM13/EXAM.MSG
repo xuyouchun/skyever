@@ -1,0 +1,33 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+A#define M 3
+A#define N 4
+A
+Avoid fun(int tt[M][N], int pp[N])
+A {
+H   int i, j;
+H   for(i=0; i<N; i++)
+H    { pp[i] = 0x7fff;    /*赋予pp[i]一个最大的值*/
+H      for(j=0; j<M; j++)
+H        if(tt[j][i]<pp[i])  pp[i] = tt[j][i];
+H    }
+A }
+A
+Amain()
+A { int t[M][N] = { { 22, 45, 56, 30 },
+A                   { 19, 33, 45, 38 },
+A                   { 20, 22, 66, 40 } };
+A   int p[N], i, j, k;
+A   clrscr();
+A   printf("The original data is: \n");
+A   for(i=0; i<M; i++)
+A     { for(j=0; j<N; j++)
+A         printf("%6d", t[i][j]);
+A       printf("\n");
+A     }
+A   fun(t, p);
+A   printf("\nThe result is:\n");
+A   for(k=0; k<N; k++)   printf("%4d", p[k]);
+A   printf("\n");
+A }

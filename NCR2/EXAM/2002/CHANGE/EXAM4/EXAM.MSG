@@ -1,0 +1,24 @@
+A#include <conio.h>
+A#include <stdio.h>
+Lvoid fun(char *s, int a, int b)
+Hvoid fun(char *s, int *a, int *b)
+A {
+A   while(*s)
+A    { if(*s>='A' && *s<='Z')
+L        a++;
+H        (*a)++;
+A      if(*s>='a' && *s<='z')
+L        b++;
+H        (*b)++;
+A      s++;
+A    }
+A }
+A
+Amain()
+A { char s[100]; int upper = 0, lower = 0;
+A   clrscr();
+A   printf("\nPlease a string:  ");  gets(s);
+A   fun(s, &upper, &lower);
+A   printf("\n upper = %d,  lower = %d\n", upper, lower);
+A }
+A

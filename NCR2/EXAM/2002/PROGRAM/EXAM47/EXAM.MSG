@@ -1,0 +1,22 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Avoid fun(char *ss)
+A {
+H   int K = 0;
+H   while(ss[K])
+H    { if(ss[++K]=='\0')  break;
+H      if(ss[K]<='z'&&ss[K]>='a')  ss[K] -= 32;
+H      K ++;
+H    }
+A }
+A
+Avoid main(void)
+A { char tt[51];
+A   clrscr();
+A   printf("\nPlease enter an character string within 50 characters:\n");
+A   gets(tt);
+A   printf("\n\nAfter changing, the string\n  %s", tt);
+A   fun(tt);
+A   printf("\nbecomes\n  %s", tt);
+A }

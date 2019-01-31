@@ -1,0 +1,20 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Lfun(int n)
+Hdouble fun(int n)
+A { int a = 2, b = 1, c, k;
+A   double s = 0.0;
+A   for(k=1; k<=n; k++)
+A     { s = s+1.0*a/b;
+L       c = a;  a += b;  b += c;
+H       c = a;  a += b;  b = c;
+A     }
+A   return (s);
+A }
+A
+Amain()
+A { int n = 5;
+A   clrscr();
+A   printf("\nThe value of function is: %lf\n", fun(n));
+A }

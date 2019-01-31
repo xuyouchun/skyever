@@ -1,0 +1,22 @@
+A#include <stdio.h>
+Aint fun(unsigned n, int *zero)
+A { int count = 0,  max = 0, t;
+A   do
+A    { t = n%10;
+L      if(t=0)
+H      if(t==0)
+A        count ++;
+A      if(max<t)   max = t;
+A      n = n/10;
+A    } while(n);
+L   zero = count;
+H   *zero = count;
+A   return max;
+A }
+A
+Amain()
+A { unsigned n;  int zero, max;
+A   printf("\nInput n(unsigned): ");  scanf("%d", &n);
+A   max = fun(n, &zero);
+A   printf("\nThe result: max = %d   zero = %d\n", max, zero);
+A }

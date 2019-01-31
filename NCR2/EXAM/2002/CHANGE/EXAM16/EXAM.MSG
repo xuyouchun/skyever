@@ -1,0 +1,46 @@
+A#include <stdio.h>
+A#include <conio.h>
+A#include <stdlib.h>
+A
+Atypedef struct aa
+A { int data;
+A   struct aa *next;
+A } NODE;
+A
+ANODE *Creatlink(int n, int m)
+A { NODE *h=NULL, *p, *s;
+A   int i;
+A   s = (NODE*)malloc(sizeof(NODE));
+A   h = p;
+L   p->next = NULL;
+H   p = s;
+A   for(i=0; i<=n; i++)
+A    { s = (NODE*)malloc(sizeof(NODE));
+L      s->data = rand()%m;
+H      s->data = rand()%(m-1);
+A      s->next=p->next;
+A      p->next=s;
+A      p=p->next;
+A    }
+L   return p;
+H   return h;
+A }
+A
+Aoutlink(NODE *h)
+A { NODE *p;
+A   p = h->next;
+A   printf("\n\nThe List: \n\n Head ");
+A   while(p)
+A    { printf("->%d", p->data);
+A      p = p->next;
+A    }
+A   printf("\n");
+A }
+A
+Amain()
+A { NODE *head;
+A   clrscr();
+A   head = Creatlink(8, 22);
+A   outlink(head);
+A }
+A

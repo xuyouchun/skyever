@@ -1,0 +1,23 @@
+A#include <stdio.h>
+A
+Lfun(int *b)
+Hint fun (int *b)
+A { int k, a1, a2, i = 0;
+L   for(k=10; k<=55; k++)
+H   for(k=10; k<55; k++)
+A    { a2 = k/10;
+A      a1 = k-a2*10;
+A      if((k%3==0 && a2==5)||(k%3==0 && a1==5))
+A        { b[i] = k;  i ++; }
+A    }
+L   return k;
+H   return i;
+A }
+A
+Amain()
+A { int a[100], k, m;
+A   m = fun(a);
+A   printf("The result is :\n");
+A   for(k=0; k<m; k++)   printf("%4d", a[k]);
+A   printf("\n");
+A }

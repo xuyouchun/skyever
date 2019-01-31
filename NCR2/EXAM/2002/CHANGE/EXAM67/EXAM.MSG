@@ -1,0 +1,17 @@
+A#include <stdio.h>
+A#include <math.h>
+A
+Afun(double a, double x0)
+A { double x1, y;
+A   x1 = (x0+a/x0)/2.0;
+A   if(fabs(x1-x0)>0.00001)
+A     y = fun(a, x1);
+A   else y = x1;
+A   return y;
+A }
+A
+Amain()
+A { double x;
+A   printf("Enter x:  ");  scanf("%lf", &x);
+A   printf("The spuare root of %lf\n", x, fun(x, 1.0));
+A }

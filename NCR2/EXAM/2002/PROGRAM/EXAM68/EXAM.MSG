@@ -1,0 +1,18 @@
+A#include <stdio.h>
+Adouble fun(int n)
+A {
+H   int k; double f=1.0, sum=1.0;
+H   for(k=1; k<=n; k++)
+H    { f *= k;
+H      sum += 1.0/f;
+H    }
+H   return sum;
+A
+A }
+A
+Amain()
+A { int n;  double s;
+A   printf("Input n:  ");  scanf("%d", &n);
+A   s = fun(n);
+A   printf("s=%f\n", s);
+A }

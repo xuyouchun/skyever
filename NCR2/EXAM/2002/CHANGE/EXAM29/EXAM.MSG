@@ -1,0 +1,21 @@
+A#include <stdio.h>
+A
+Aint fun(int a, int b)
+A { int r, t;
+A   if(a<b)
+L    { t = a;  b = a;  a = t; }
+H    { t = a;  a = b;  b = t; }
+A   r = a%b;
+A   while(r!=0)
+A    { a = b;  b = r;  r = a%b; }
+L   return (a);
+H   return (b);
+A }
+A
+Amain()
+A { int num1, num2, a;
+A   printf("Input num1  num2:  ");  scanf("%d%d", &num1, &num2);
+A   printf("num1 = %d  num2 = %d\n\n", num1, num2);
+A   a = fun(num1, num2);
+A   printf("The maximun common divisor is %d\n\n", a);
+A }

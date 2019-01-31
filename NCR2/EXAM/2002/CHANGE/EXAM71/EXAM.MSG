@@ -1,0 +1,16 @@
+A#include <conio.h>
+A#include <stdio.h>
+Along fun(int k)
+L { if  k>0
+H { if(k>0)
+A     return (k*fun(k-1));
+L   else if(k=0)
+H   else if(k==0)
+A    return 1;
+A }
+A
+Amain()
+A { int k = 10;
+A   clrscr();
+A   printf("%d!=%ld\n", k, fun(k));
+A }

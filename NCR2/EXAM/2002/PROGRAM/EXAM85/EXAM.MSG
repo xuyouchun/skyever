@@ -1,0 +1,48 @@
+A#include <stdio.h>
+A#include <stdlib.h>
+A#define N 8
+Astruct slist
+A { double s;
+A   struct  slist *next;
+A };
+A
+Atypedef struct slist STREC;
+A
+Adouble fun(STREC *h)
+A {
+H   STREC *ptr = h;
+H   double sum=0.0; int num=0;
+H   while(ptr)
+H    { num ++;
+H      sum += ptr->s;
+H      ptr = ptr->next;
+H    }
+H   return sum / num;
+A }
+A
+ASTREC *creat(double *s)
+A { STREC *h, *p, *q; int i=0;
+A   h = p = (STREC*)malloc(sizeof(STREC));
+A   while(i<N)
+A    { q = (STREC*)malloc(sizeof(STREC));
+A      q->s = s[i]; i++; p->next = q;  p = q;
+A    }
+A   p -> next = NULL;
+A   return h;
+A }
+A
+Aoutlist(STREC *h)
+A { STREC *p;
+A   p=h->next;  printf("head");
+A   do { printf("->%4.1f", p->s); p = p->next; }
+A     while(p!=0);
+A   printf("\n\n");
+A }
+A
+Amain()
+A { double s[N] = { 85, 76, 69, 85, 91, 72, 64, 87 }, ave;
+A   STREC *h;
+A   h = creat(s);  outlist(h);
+A   ave = fun(h);
+A   printf("ave = %6.3f\n", ave);
+A }

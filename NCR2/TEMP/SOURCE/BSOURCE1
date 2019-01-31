@@ -1,0 +1,14 @@
+#include <conio.h>
+#include <math.h>
+#include <stdio.h>
+
+int fun(int t)
+ {
+ }
+
+main()
+ { int n;
+   clrscr();  n = 1000;
+   printf("n = %d, f = %d\n", n, fun(n));
+ }
+

@@ -1,0 +1,21 @@
+A#include <stdlib.h>
+A#include <stdio.h>
+A
+Avoid fun(int a[], int n, int *max, int *d)
+A {
+H   int k;  *max = 0;
+H   for(k=0; k<n; k++)
+H     if(a[k]>*max)
+H       { *max = a[k];
+H         *d = k;
+H       }
+A }
+A
+Amain()
+A { int i, x[20], max, index, n = 10;
+A   randomize();
+A   for(i=0; i<n; i++)  { x[i] = rand()%50;  printf("%4d", x[i]); }
+A   printf("\n");
+A   fun(x, n, &max, &index);
+A   printf("Max=%5d, Index=%4d\n", max, index);
+A }

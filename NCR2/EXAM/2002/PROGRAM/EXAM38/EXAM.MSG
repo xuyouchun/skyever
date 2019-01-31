@@ -1,0 +1,19 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+A#define M 81
+A
+Aint fun(char *ss, char c)
+A {
+H  char *ptr = ss;  int num = 0;
+H  while(*ptr)  { if(*ptr==c)  num ++;  ptr ++; }
+H  return num;
+A }
+A
+Amain()
+A { char a[M], ch;
+A   clrscr();
+A   printf("\nPlease enter a string:");  gets(a);
+A   printf("\nPlease enter a char:");  ch = getchar();
+A   printf("\nThe number of the char is:%d\n", fun(a, ch));
+A }

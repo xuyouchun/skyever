@@ -1,0 +1,18 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Aint fun(int *s, int t, int *k)
+A {
+H   int i, max = 0;
+H   for(i=0; i<t; i++)
+H     { if(s[i]>max)
+H         { max = s[i];  *k = i; }
+H     }
+A }
+A
+Amain()
+A { int a[10] = { 876, 675, 896, 101, 301, 401, 980, 431, 451, 777 }, k;
+A   clrscr();
+A   fun(a, 10, &k);
+A   printf("%d, %d\n", k, a[k]);
+A }

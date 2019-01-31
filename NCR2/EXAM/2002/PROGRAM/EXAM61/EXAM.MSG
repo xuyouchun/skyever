@@ -1,0 +1,30 @@
+A#include <stdio.h>
+A#define N 50
+A#define M 11
+Avoid fun(int *a, int *b)
+A {
+H   int k, num;
+H   for(k=0; k<M; k++)  b[k] = 0;
+H   for(k=0; k<N; k++)
+H    { num = a[k]/10;
+H      if(num>10)  num = 10;
+H      b[num] ++;
+H    }
+A }
+A
+Adouble rnd()
+A { static t=29, c=217, m=1024, r=0;
+A   r = (r*t+c)%m;  return ((double)r/m);
+A }
+A
+Amain()
+A { int age[N], i, d[M];
+A   for(i=0; i<N; i++)  age[i]=(int)(115*rnd());
+A   printf("The original data :\n");
+A   for(i=0; i<N; i++)  printf((i+1)%10==0?"%4d\n":"%4d", age[i]);
+A   printf("\n\n");
+A   fun(age, d);
+A   for(i=0; i<10; i++)  printf("%4d---%4d  :  %4d\n", i*10, i*10+9, d[i]);
+A   printf("  Over  100 : %4d\n", d[10]);
+A }
+A

@@ -1,0 +1,19 @@
+A#include <stdio.h>
+A#include <string.h>
+Along fun(char *p)
+A {
+H  long Num = 0;
+H  int L = strlen(p), i;
+H  for(i=(*p=='-'?1:0); i<L; i++)
+H    Num = Num*10+(p[i]-'0');
+H  return *p=='-'?-Num:Num;
+A }
+A
+Amain()
+A { char s[6];
+A   long n;
+A   printf("Enter a string:\n");
+A   gets(s);
+A   n = fun(s);
+A   printf("%ld\n", n);
+A }

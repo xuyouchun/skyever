@@ -1,0 +1,29 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+Achar *fun(char *s, char *t)
+A { char *p, *r, *a;
+L   a = Null;
+H   a = NULL;
+A   while (*s)
+A    { p = s;  r = t;
+A      while(*r)
+L       if(r==p) { r++; p++; }
+H       if(*r==*p) { r++; p++; }
+A       else break;
+A      if(*r=='\0')  a = s;
+A      s ++;
+A    }
+A   return a;
+A }
+A
+Amain()
+A { char s[100], t[100], *p;
+A   clrscr();
+A   printf("\nPlease enter string S:  "); scanf("%s", s);
+A   printf("\nPlease enter substring t: "); scanf("%s", t);
+A   p = fun(s, t);
+A   if(p)  printf("\nThe result is : %s\n", p);
+A   else   printf("\nNot found !\n");
+A }

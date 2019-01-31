@@ -1,0 +1,22 @@
+A#include <stdio.h>
+A
+Avoid fun(int (*s)[10], int *b, int *n, int mm, int nn)
+A {
+H   int i, j;
+H   for(j=0; j<mm; j++)
+H     for(i=0; i<nn; i++)
+H       b[(*n)++] = s[j][i];
+A }
+A
+Amain()
+A { int w[10][10] = { {33,33,33,33}, {44,44,44,44}, {55,55,55,55}}, i, j;
+A   int a[100] = {0}, n = 0;
+A   printf("The mattix:\n");
+A   for(i=0; i<3; i++)
+A     { for(j=0; j<4; j++)   printf("%3d", w[i][j]);
+A       printf("\n");
+A     }
+A   fun(w, a, &n, 3, 4);
+A   printf("The A array:\n");
+A   for(i=0; i<n; i++)  printf("%3d", a[i]);  printf("\n\n");
+A }

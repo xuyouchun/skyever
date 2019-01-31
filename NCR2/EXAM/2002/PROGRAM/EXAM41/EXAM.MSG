@@ -1,0 +1,26 @@
+A#include <stdio.h>
+A#define   M 3
+A#define   N 4
+A
+Avoid fun(char (*s)[N], char *b)
+A {
+H   int i, j, k=0;
+H   for(i=0; i<N; i++)
+H     for(j=0; j<M; j++)
+H        b[k++] = s[j][i];
+H   b[k] = '\0';
+A }
+A
+Amain()
+A { char a[100], w[M][N] = { {'W','W','W','W' }, {'S','S','S','S'},
+A                            {'H','H','H','H' } };
+A   int i, j;
+A   printf("The matrix:\n");
+A   for(i=0; i<M; i++)
+A     { for(j=0; j<N; j++)  printf("%3c", w[i][j]);
+A       printf("\n");
+A     }
+A   fun(w, a);
+A   printf("The A string:\n");  puts(a);
+A   printf("\n\n");
+A }

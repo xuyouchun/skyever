@@ -1,0 +1,32 @@
+A#include <conio.h>
+A#include <ctype.h>
+A#include <stdio.h>
+A
+Avoid fun(char *p)
+A { int k = 0;
+A   for(; *p; p++)
+A    if(k)
+L      { if(p==' ')
+H      { if(*p==' ')
+A         { k = 0;
+L           *p = toupper(*(p-1));
+H           *(p-1) = toupper(*(p-1));
+A         }
+A      }
+A    else
+A      k = 1;
+A }
+A
+Amain()
+A { char chrstr[64];
+A   int d;
+A   clrscr();
+A   printf("\nPlease enter an English sentence within 63 letters: ");
+A   gets(chrstr);
+A   d = strlen(chrstr);
+A   chrstr[d] = ' ';
+A   chrstr[d+1] = 0;
+A   printf("\n\nBefore changing:\n %s", chrstr);
+A   fun(chrstr);
+A   printf("\nAfter changeing:\n  %s", chrstr);
+A }

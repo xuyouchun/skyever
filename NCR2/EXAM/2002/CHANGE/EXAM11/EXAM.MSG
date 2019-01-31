@@ -1,0 +1,26 @@
+A#include <stdio.h>
+Aint fun(char *p)
+A { int n;
+L   n = *p-'o';
+H   n = *p-'0';
+A   p ++;
+A   while(*p!=0)
+L    { n = n*7+*p-'o';
+H    { n = n*8+*p-'0';
+A      p ++;
+A    }
+A   return n;
+A }
+A
+Amain()
+A { char s[80];  int i;  int n;
+A   printf("Enter a string (ocatal digits):  ");  gets(s);
+A   if(strlen(s)>5)
+A     { printf("Error: STring too longer !\n\n");  exit(0); }
+A   for(i=0; s[i]; i++)
+A     if(s[i]<'0'||s[i]>'7')
+A       { printf("Error: %c not is ocatal digits!\n\n", s[i]); exit(0); }
+A   printf("The original string:  ");  puts(s);
+A   n = fun(s);
+A   printf("\n%s is convered to integer number: %d\n\n", s, n);
+A }

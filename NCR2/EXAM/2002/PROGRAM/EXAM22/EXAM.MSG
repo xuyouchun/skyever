@@ -1,0 +1,45 @@
+A#include <stdio.h>
+A#include <stdlib.h>
+A#define N 8
+Astruct slist
+A { double s;
+A   struct slist *next;
+A };
+A
+Atypedef struct slist STREC;
+Adouble fun(STREC *h)
+A {
+H   double max=0.0;
+H   while(h)
+H    { if(h->s>max)  max = h->s;
+H      h = h->next;
+H    }
+H   return max;
+A }
+A
+ASTREC *creat(double *s)
+A { STREC *h, *p, *q;  int i = 0;
+A   h = p = (STREC*)malloc(sizeof(STREC));  p->s=0;
+A   while(i<N)
+A    { q = (STREC*)malloc(sizeof(STREC));
+A      q->s=s[i]; i ++; p->next = q; p = q;
+A    }
+A   p->next = 0;
+A   return h;
+A }
+A
+Aoutlist(STREC *h)
+A { STREC *p;
+A   p = h->next;  printf("head");
+A   do
+A    { printf("->%2.0f", p->s);  p = p->next; }
+A   while(p!=0);
+A   printf("\n\n");
+A }
+Amain()
+A { double s[N] = { 85.0, 76.0, 69.0, 85.0, 91.0, 72.0, 64.0, 87.0 }, max;
+A   STREC *h;
+A   h = creat(s);  outlist(h);
+A   max = fun(h);
+A   printf("max = %6.1f\n", max);
+A }

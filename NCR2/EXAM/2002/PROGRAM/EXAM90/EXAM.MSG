@@ -1,0 +1,17 @@
+A#include <stdio.h>
+A
+Adouble fun(int n)
+A {
+H   double sum = 0.0;
+H   int k;
+H   for(k=1; k<=n; k++)
+H      sum += 1.0/(2*k-1) - 1.0/(2*k);
+H   return sum;
+A }
+A
+Amain()
+A { int n;  double s;
+A   printf("\nInput n:  ");  scanf("%d", &n);
+A   s = fun(n);
+A   printf("\ns=%f\n",s);
+A }

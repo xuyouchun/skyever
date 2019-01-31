@@ -1,0 +1,27 @@
+A#include <stdio.h>
+Avoid fun(char *p, char *b)
+A { int i, k=0;
+A   while(*p)
+L    { i = 1;
+H    { i = 0;
+L      while(i<3 || *p)
+H      while(i<3 && *p)
+A        { b[k] = *p;
+A          k ++;  p ++;  i ++;
+A        }
+A      if(*p)
+L       { b[k] = ' ';
+H       { b[k++] = ' ';
+A       }
+A    }
+A   b[k] = '\0';
+A }
+A
+Amain()
+A { char a[80], b[80];
+A   printf("Enter a string:    ");     gets(a);
+A   printf("The original string: ");   puts(a);
+A   fun(a, b);
+A   printf("\nThe string after insert space:  ");  puts(b);
+A   printf("\n\n");
+A }

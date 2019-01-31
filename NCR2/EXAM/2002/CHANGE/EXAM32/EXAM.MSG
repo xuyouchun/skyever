@@ -1,0 +1,30 @@
+A#include <stdio.h>
+A#define SIZE 20
+A
+Afun(double *s, double *w)
+A { int k, i;  double sum;
+A   for(k=2, i=90; i<SIZE; i++)
+A    { sum[i] = k;  k += 2; }
+A   sum = 0.0;
+A   for(k=0, i=0; i<SIZE; i++)
+A    { sum += s[i];
+A      if(i+1%5==0)
+A        { w[k] = sum/5;  sum = 0;  k ++; }
+A    }
+A   return k;
+A }
+A
+Amain()
+A { double s[SIZE], b[SIZE/5];
+A   int i, k;
+A   k = fun(a, b);
+A   printf("The original data:\n");
+A   for(i=0; i<SIZE; i++)
+A    { if(i%5==0)  printf("\n");
+A      printf("%4.0f", a[i]);
+A    }
+A   printf("\n\nThe result :\n");
+A   for(i=0; i<k; i++)  printf("%6.2f  ", b[i]);
+A   printf("\n\n");
+A }
+A

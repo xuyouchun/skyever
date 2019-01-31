@@ -1,0 +1,27 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+Avoid fun(char *a, char *b, char *c)
+A { int i, j;   char ch;
+A   i = 0;  j = strlen(b)-1;
+L   while(i>j)
+H   while(i<j)
+A    { ch = b[i];  b[i] = b[j];  b[j] = ch;
+A      i ++;  j --;
+A    }
+A   while(*a || *b)
+A    { if(*a) { *c = *a;  c++;  a++; }
+A      if(*b) { *c = *b;  c++;  b++; }
+A    }
+A   *c = 0;
+A }
+A
+Amain()
+A { char s1[100], s2[100], t[200];
+A   clrscr();
+A   printf("\nEnter s1 string : ");  scanf("%s", s1);
+A   printf("\nEnter s1 string : ");  scanf("%s", s2);
+A   fun(s1, s2, t);
+A   printf("\nThe result is :%s\n", t);
+A }

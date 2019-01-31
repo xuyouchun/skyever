@@ -1,0 +1,19 @@
+A#include <conio.h>
+A#include <math.h>
+A#include <stdio.h>
+A
+Afloat fun()
+A {
+H   float x1 = 0.0, x0;
+H   do
+H    { x0 = x1;
+H      x1 = cos(x0);
+H    }
+H   while(fabs(x0-x1)>0.000001);
+H   return x1;
+A }
+A
+Amain()
+A { clrscr();
+A   printf("Root = %f\n", fun());
+A }

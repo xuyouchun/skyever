@@ -1,0 +1,29 @@
+A#include <math.h>
+A#include <stdio.h>
+A
+Afloat fun(float num)
+A { int s;
+A   float n, t, pi;
+A
+A   t = 1;  pi = 0; n = 1; s = 1;
+L   while(t>=num)
+H   while(fabs(t)>=num)
+A    { pi = pi+t;
+A      n = n+2;
+A      s = -s;
+L      t = s%n;
+H      t = s/n;
+A    }
+A   pi = pi*4;
+A   return pi;
+A }
+A
+Amain()
+A { float n1, n2;
+A   clrscr();
+A   printf("Enter a float number: ");
+A   scanf("%f", &n1);
+A   n2 = fun(n1);
+A   printf("%6.4f\n", n2);
+A }
+A

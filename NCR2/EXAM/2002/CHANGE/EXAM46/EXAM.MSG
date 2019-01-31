@@ -1,0 +1,26 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <math.h>
+A
+Lfun(int n)
+Hdouble fun(int n)
+A { double sum, s0, s1, s2, s; int k;
+A   sum = 1.0;
+A   if(n<=2)  sum = 0.0;
+A   s0 = 0.0;  s1 = 0.0;  s2 = 1.0;
+A   for(k=4; k<=n; k++)
+A     { s = s0 + s1 + s2;
+A       sum += sqrt(s);
+A       s0 = s1;  s1 = s2;  s2 = s;
+A     }
+L   return sum
+H   return sum;
+A }
+A
+Amain()
+A { int n;
+A   clrscr();
+A   printf("Input N=");
+A   scanf("%d", &n);
+A   printf("%f\n", fun(n));
+A }

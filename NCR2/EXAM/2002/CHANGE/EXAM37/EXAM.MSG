@@ -1,0 +1,31 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A#define  N  80
+A
+Aint fun(char *s, char *t)
+A { int n;
+A   char *p, *r;
+A   n = 0;
+A   while(*s)
+A    { p = s;
+L      r = p;
+H      r = t;
+A      while(*r)
+A        if(*r==*p)  { r ++;  p ++; }
+A        else break;
+L      if(*r=0)
+H      if(*r=='\0')
+A        n ++;
+A      s ++;
+A    }
+A   return n;
+A }
+Amain()
+A { char a[N], b[N];  int m;
+A   clrscr();
+A   printf("\nPlease enter string a :");  gets(a);
+A   printf("\nPlease enter substring b: "); gets(b);
+A   m = fun(a, b);
+A   printf("\nThe result is : m = %d\n", m);
+A }

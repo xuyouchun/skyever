@@ -1,0 +1,26 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#define N 20
+A
+Lint fun(int *a, int n)
+Hvoid fun (int *a, int n)
+A { int i, m, t, k;
+A   for(i=0; i<2; i++)
+L     { m = 0;
+H     { m = i;
+A       for(k=i; k<n; k++)
+L         if(a[k]>a[m])  k = m;
+H         if(a[k]>a[m])  m = k;
+A       t = a[i];  a[i] = a[m];  a[m] = t;
+A     }
+A }
+A
+Amain()
+A { int x, b[N] = { 11, 5, 12, 0, 3, 6, 9, 7, 10, 8 }, n=10, i;
+A   clrscr();
+A   for(i=0; i<n; i++)  printf("%d ", b[i]);
+A   printf("\n");
+A   fun(b, n);
+A   for(i=0; i<n; i++)  printf("%d ", b[i]);
+A   printf("\n");
+A }

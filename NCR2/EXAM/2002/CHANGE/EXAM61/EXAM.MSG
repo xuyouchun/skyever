@@ -1,0 +1,20 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Lfun(int m)
+Hdouble fun(int m)
+A { double y = 0, d;
+A   int  i;
+L   for(i=100, i<=m, i+=100)
+H   for(i=100; i<=m; i+=100)
+A    { d = (double)i*(double)i;
+A      y += 1.0/d;
+A    }
+A   return (y);
+A }
+A
+Amain()
+A { int n = 2000;
+A   clrscr();
+A   printf("\nThe reslt is %lf\n", fun(n));
+A }

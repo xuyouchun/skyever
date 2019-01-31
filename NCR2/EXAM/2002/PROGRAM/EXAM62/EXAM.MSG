@@ -1,0 +1,25 @@
+A#include <stdio.h>
+A#include <string.h>
+A#define N 80
+A
+Aint fun(char *s)
+A {
+H   char *ptr = s;
+H   int num = 0;
+H   while(*ptr)
+H    { if(*ptr==' ')
+H       { num++;
+H         while(*ptr++==' ');
+H       }
+H      else ptr ++;
+H    }
+H   return num+1;
+A }
+A
+Amain()
+A { char line[N];  int num = 0;
+A   printf("Enter a string: \n");  gets(line);
+A   num = fun(line);
+A   printf("The number of word is  : %d\n\n", num);
+A }
+A

@@ -1,0 +1,22 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <math.h>
+A
+Aint fun(int high)
+A { int sum = 0, n = 0, j, yes;
+A   while((high>=2) && (n<10))
+A    { yes = 1;
+A      for(j=2; j<=high/2; j++)
+A        if(high%j==0)
+L          { yes = 0;  break }
+H          { yes = 0;  break; }
+A      if(yes) { sum += high;  n ++; }
+A      high --;
+A    }
+A   return sum;
+A }
+A
+Amain()
+A { clrscr();
+A   printf("%d\n", fun(100));
+A }

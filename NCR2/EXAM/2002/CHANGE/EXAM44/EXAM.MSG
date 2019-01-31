@@ -1,0 +1,25 @@
+A#include <stdio.h>
+A#include <conio.h>
+A#define M 10
+Aint a[M][M] = { 0 };
+A
+Lfun(int **a, int m)
+Hfun(int (*a)[M], int m)
+A { int j, k;
+A   for(j=0; j<m; j++)
+A     for(k=0; k<m; k++)
+L       a[j][k] = k*j;
+H       a[j][k] = (k+1)*(j+1);
+A }
+A
+Amain()
+A { int i, j, n;
+A   clrscr();
+A   printf("Enter n:");  scanf("%d", &n);
+A   fun(a, n);
+A   for(i=0; i<n; i++)
+A    { for(j=0; j<n; j++)
+A        printf("%4d", a[i][j]);
+A      printf("\n");
+A    }
+A }

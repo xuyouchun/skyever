@@ -1,0 +1,23 @@
+A#inc不过要提醒一点：在该题中，采用了直接用数组来传递参数的办法lude <conio.h>
+A#include <stdio.h>
+A
+Avoid fun(int a[3][3], int b[3][3])
+A {
+H  int i, j;
+H  for(j=0; j<3; j++)
+H    for(i=0; i<3; i++)
+H       b[j][i] = a[j][i] + a[i][j];
+A }
+A
+Amain()
+A { int a[3][3] = { {1,2,3}, {4,5,6}, {7,8,9} }, t[3][3];
+A   int i, j;
+A
+A   clrscr();
+A   fun(a, t);
+A   for(i=0; i<3; i++)
+A    { for(j=0; j<3; j++)
+A        printf("%7d", t[i][j]);
+A      printf("\n");
+A    }
+A }

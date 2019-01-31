@@ -1,0 +1,23 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Adouble fun(double q)
+A { int n;  double s, t;
+A   n = 2;
+A   s = 2.0;
+A   while(s<=q)
+A    { t = s;
+L      s = s+(n+1)/n;
+H      s = s+(double)(n+1)/n;
+A      n ++;
+A    }
+A  printf("n=%4d\n", n);
+L  return s;
+H  return t;
+A }
+A
+Amain()
+A { clrscr();
+A   printf("%f\n", fun(50));
+A }
+A

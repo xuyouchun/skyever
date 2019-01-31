@@ -1,0 +1,32 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+A#define M 4
+A#define N 5
+A
+Aint fun(int a[M][N])
+A {
+H   int i, j, sum=0;
+H   for(j=0; j<M; j++)
+H     for(i=0; i<N; i++)
+H       if(i==0 || j==0 || i==N-1 || j==M-1)
+H         sum += a[j][i];
+H   return sum;
+A }
+A
+Amain()
+A { int aa[M][N] = {{ 1, 3, 5, 7, 9 },
+A                   { 2, 9, 9, 9, 4 },
+A                   { 6, 9, 9, 9, 8 },
+A                   { 1, 3, 5, 7, 0 } };
+A   int i, j, y;
+A   clrscr();
+A   printf("The original data is :\n");
+A   for(i=0; i<M; i++)
+A     { for(j=0; j<N; j++)  printf("%6d ", aa[i][j]);
+A       printf("\n");
+A     }
+A   y = fun(aa);
+A   printf("\nThe sum: %d\n", y);
+A   printf("\n");
+A }

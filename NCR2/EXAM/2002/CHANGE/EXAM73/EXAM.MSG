@@ -1,0 +1,20 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Adouble fun(int m)
+A { double t = 1.0;
+A   int i;
+A   for(i=2; i<=m; i++)
+L    t = 1.0 - 1/i;
+H    t -= 1.0/i;
+L   _________;
+H   return t;
+A }
+A
+Amain()
+A { int m;
+A   clrscr();
+A   printf("Please enter 1 integer numbers: \n");
+A   scanf("%d", &m);
+A   printf("\n\nThe result is %lf\n", fun(m));
+A }

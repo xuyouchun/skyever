@@ -1,0 +1,33 @@
+A#include <stdio.h>
+A#define N 16
+A
+Atypedef struct
+A { char num[10];
+A   int s;
+A } STREC;
+A
+Aint fun(STREC *a, STREC *b, int l, int h)
+A {
+H   int k, M=0;
+H   for(k=0; k<N; k++)
+H     if(a[k].s<=h && a[k].s>=l)  b[M++] = a[k];
+H   return M;
+A }
+A
+Amain()
+A { STREC s[N] = { {"GA005",85},{"GA003",76},{"GA002",69},{"GA004",85},
+A                  {"GA001",96},{"GA007",72},{"GA008",64},{"GA006",87},
+A                  {"GA015",85},{"GA013",94},{"GA012",64},{"GA014",91},
+A                  {"GA011",90},{"GA017",64},{"GA018",64},{"GA016",72}
+A                };
+A   STREC h[N], tt;
+A   int i, j, n, low, heigh, t;
+A   printf("Enter 2 integer number low & heigh:  ");
+A   scanf("%d%d", &low, &heigh);
+A   if(heigh<low) { t=heigh; heigh=low; low=t; }
+A   n = fun(s, h, low, heigh);
+A   printf("The student's data bdtween %d--%d:\n", low, heigh);
+A   for(i=0; i<n; i++)
+A     printf("%s   %4d\n", h[i].num, h[i].s);
+A   printf("\n");
+A }

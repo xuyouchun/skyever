@@ -1,0 +1,25 @@
+A#include <stdio.h>
+A#include <conio.h>
+A
+Aint fun(char s[], int c)
+A {
+A   char *p = s;
+A   while(*p)
+A    { if(*p==c)
+A        { char *p0 = p;
+A          while(*p0)   *p0++ = *(p0+1);
+A        }
+A      p ++;
+A    }
+A }
+A
+Amain()
+A { static char str[]="trubo c and borland c++";
+A   char ch;
+A   clrscr();
+A   printf("原始字符串：%s\n", str);
+A   printf("输入一个字符：");
+A   scanf("%c", &ch);
+A   fun(str, ch);
+A   printf("str[]=%s\n", str);
+A }

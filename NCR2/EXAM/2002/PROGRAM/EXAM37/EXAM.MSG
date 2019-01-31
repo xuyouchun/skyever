@@ -1,0 +1,25 @@
+A#include <stdio.h>
+A#define N 8
+Atypedef struct
+A { char num[10];
+A   double s[N];
+A   double ave;
+A }  STREC;
+A
+Lvoid fun()
+Hvoid fun(STREC *ptr)
+A {
+H   int k;  double sum = 0.0;
+H   for(k=0; k<N; k++)  sum += ptr->s[k];
+H   ptr->ave = sum/N;
+A }
+A
+Amain()
+A { STREC s = {"GA005", 85.5, 76, 69.5, 85, 91, 72, 64.5, 87.5 };
+A   int i;
+A   fun(&s);
+A   printf("The %s's student data:\n", s.num);
+A   for(i=0; i<N; i++)
+A      printf("%4.1f\n", s.s[i]);
+A   printf("\nsave=%7.3f\n", s.ave);
+A }

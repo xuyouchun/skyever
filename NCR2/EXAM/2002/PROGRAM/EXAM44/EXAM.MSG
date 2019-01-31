@@ -1,0 +1,30 @@
+A#include <stdio.h>
+A#include <string.h>
+A#include <conio.h>
+A
+Aint fun(char *str, char *substr)
+A {
+H   char *ptr = str;  int N = 0;
+H   while(*ptr)
+H    { if(ptr[0]==substr[0] && ptr[1]==substr[1])
+H           N ++;
+H      ptr ++;
+H    }
+H   return N;
+A }
+A
+Amain()
+A { char str[81], substr[3];
+A   int n;
+A
+A   clrscr();
+A   printf("ÊäÈëÖ÷×Ö·û´®£º");
+A   gets(str);
+A   printf("ÊäÈë×Ó×Ö·û´®£º");
+A   gets(substr);
+A   puts(str);
+A   puts(substr);
+A   n = fun(str, substr);
+A   printf("n = %d\n", n);
+A }
+A

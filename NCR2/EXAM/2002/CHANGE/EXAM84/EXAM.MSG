@@ -1,0 +1,23 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Avoid fun(int m, int k)
+A { int aa[20], i;
+A   for(i=0; m; i++)
+L    { aa[i] = m/k;
+H    { aa[i] = m%k;
+A      m /= k;
+A    }
+A   for(; i; i--)
+L     printf("%d", aa[i]);
+H     printf("%d", aa[i-1]);
+A }
+A
+Amain()
+A { int b, n;
+A   clrscr();
+A   printf("\Please enter a number and a base:\n");
+A   scanf("%d  %d", &n, &b);
+A   fun(n, b);
+A   printf("\n");
+A }

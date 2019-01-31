@@ -1,0 +1,34 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <stdlib.h>
+A
+Afun(int n, int *a)
+A { int i, j, p, t;
+A   for(j = 0;  j<n-1;  j++)
+A     { p = j;
+L       for(i=j+1; i<n-1; i++)
+H       for(i=j+1; i<n; i++)
+A         if(a[p]>a[i])
+L           t = i;
+H           p = i;
+A       if(p!=j)
+A         { t = a[j];  a[j] = a[p];  a[p] = t; }
+A     }
+A }
+A
+Aputarr(int n, int *z)
+A { int i;
+A   for(i=1; i<=n; i++, z++)
+A    { printf("%4d", *z);
+A      if(!(i%10))  printf("\n");
+A    }
+A   printf("\n");
+A }
+A
+Amain()
+A { int aa[20] = { 9, 3, 0, 4, 1, 2, 5, 6, 8, 10, 7 }, n = 11;
+A   clrscr();
+A   printf("\n\nBefore sorting %d numbers:\n", n);  putarr(n, aa);
+A   fun(n, aa);
+A   printf("\nAfter sorting %d numbers:\n", n);  putarr(n, aa);
+A }

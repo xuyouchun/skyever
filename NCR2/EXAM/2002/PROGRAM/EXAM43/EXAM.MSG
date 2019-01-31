@@ -1,0 +1,29 @@
+A#include <stdio.h>
+A#include <string.h>
+A#include <conio.h>
+A
+Afun(char (*a)[81], int num, char *max)
+A { int k; int M = 0;
+A   for(k=0; k<num; k++)
+A     if(strlen(a[k])>M)
+A       { M = strlen(a[k]);
+A         max = a[k];
+A       }
+A }
+A
+Amain()
+A { char ss[10][8], *ps;
+A   int n, i=0;
+A   clrscr();
+A   printf("ÊäÈëÈô¸É¸ö×Ö·û´®£º");
+A   gets(ss[i]);
+A   puts(ss[i]);
+A   while(!strcmp(ss[i], "****")==0)
+A    { i ++;
+A      gets(ss[i]);
+A      puts(ss[i]);
+A    }
+A   n = i;
+A   fun(ss,n,ps);
+A   printf("\nmax\%s\n", ps);
+A }

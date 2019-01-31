@@ -1,0 +1,30 @@
+A#include <stdio.h>
+A#include <string.h>
+A#include <conio.h>
+A#define  N 10
+A
+Atypedef  struct ss
+A { char num[10];  int s; } STU;
+A
+Afun(STU a[], STU *s)
+A {
+H   int max = 0, k;
+H   for(k=0; k<N; k++)
+H     if(a[k].s>max)
+H       { max = a[k].s;
+H         *s = a[k];
+H       }
+A }
+A
+Amain()
+A { STU a[N]={ {"A01",81}, {"A02",89}, {"A03",66}, {"A04",87}, {"A05",77},
+A              {"A06",90}, {"A07",79}, {"A08",61}, {"A09",80}, {"A10",71}
+A            }, m;
+A   int i;
+A   clrscr();
+A   printf("***** The original data *****\n");
+A   for(i=0; i<N; i++)  printf("No = %s  Mark = %d\n", a[i].num, a[i].s);
+A   fun(a, &m);
+A   printf("***** The Result *****\n");
+A   printf("The top : %s, %d\n", m.num, m.s);
+A }

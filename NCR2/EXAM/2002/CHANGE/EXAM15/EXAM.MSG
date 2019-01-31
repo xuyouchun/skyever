@@ -1,0 +1,23 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+Lvoid fun(char str, char ch)
+Hvoid fun(char *str, char ch)
+A { while(*str && *str!=ch)  str ++;
+L   if(*str==ch)
+H   if(*str=='\0')
+A    { str[0] = ch;
+L      str[1] = '0';
+H      str[1] = '\0';
+A    }
+A }
+A
+Amain()
+A { char s[81], c;
+A   printf("\nPlease enter a string:\n");  gets(s);
+A   printf("\nPlease enter the character to search: ");
+A   c = getchar();
+A   fun(s, c);
+A   printf("\The result is %s\n", s);
+A }

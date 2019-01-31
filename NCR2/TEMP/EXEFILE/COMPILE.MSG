@@ -1,0 +1,7 @@
+Turbo C  Version 2.0  Copyright (c) 1987, 1988 Borland International
+..\temp\2002\program\exam69.c:
+Warning ..\temp\2002\program\exam69.c 7: Parameter 't' is never used in function fun
+Turbo Link  Version 2.0  Copyright (c) 1987, 1988 Borland International
+c0l.obj : unable to open file
+
+        Available memory 58940

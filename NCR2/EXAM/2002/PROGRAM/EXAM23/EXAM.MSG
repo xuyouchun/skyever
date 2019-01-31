@@ -1,0 +1,18 @@
+A#include <stdio.h>
+A#include <string.h>
+A#define N 80
+Aint fun(char *str)
+A {
+H   int L = strlen(str), k;
+H   for(k=0; k<L; k++)
+H     if(str[k]!=str[L-1-k])  return 0;
+H   return 1;
+A }
+A
+Amain()
+A { char s[N];
+A   printf("Enter a string: "); gets(s);
+A   printf("\n\n");  puts(s);
+A   if(fun(s))  printf("  YES\n");
+A   else   printf(" NO\n");
+A }

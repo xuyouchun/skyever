@@ -1,0 +1,32 @@
+A#include <stdio.h>
+A#define N 16
+Atypedef struct
+A { char num[10];
+A   int s;
+A } STREC;
+A
+Aint fun(STREC a[])
+A {
+H   STREC t;  int i, j;
+H   for(i=0; i<N; i++)
+H     for(j=i+1; j<N; j++)
+H       { if(a[i].s<a[j].s)
+H           { t = a[i]; a[i] = a[j]; a[j] = t; }
+H       }
+A }
+A
+Amain()
+A { STREC s[N]={{"GA005", 85}, {"GA003", 76}, {"GA002", 69}, {"GA004", 85},
+A               {"GA001", 91}, {"GA007", 72}, {"GA008", 64}, {"GA006", 87},
+A               {"GA015", 85}, {"GA013", 91}, {"GA012", 64}, {"GA014", 91},
+A               {"GA011", 66}, {"GA017", 64}, {"GA018", 64}, {"GA016", 71}
+A              };
+A   int i; FILE *out;
+A   fun(s);
+A   printf("The data after sorted: \n");
+A   for(i=0; i<N; i++)
+A    { if((i)&4==0)  printf("\n");
+A      printf("%s  %4d \n", s[i].num, s[i].s);
+A    }
+A   printf("\n");
+A }

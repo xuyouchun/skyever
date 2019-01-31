@@ -1,0 +1,6 @@
+/******** TABLE  BALL  SET ********/
+Ro = 2;
+Rr = 2;
+Sound = 1;
+While = 0;
+/******** TABLE  BALL  SET ********/

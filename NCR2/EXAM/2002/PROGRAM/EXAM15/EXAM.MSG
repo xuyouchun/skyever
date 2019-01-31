@@ -1,0 +1,17 @@
+A#include <conio.h>
+A#include <stdio.h>
+Aunsigned fun(unsigned w)
+A {
+H   unsigned M = 1;
+H   while(M<w)  M *= 10;   //寻找刚好大于w的10的正整数次幂
+H   return w%(M/10);
+A }
+A
+Amain()
+A { unsigned x;
+A   clrscr();
+A   printf("Enter a unsigned integer number :  ");  scanf("%u", &x);
+A   printf("The original data is : %u\n", x);
+A   if(x<10)  printf("Data error !");
+A   else printf("The result : %u\n", fun(x));
+A }

@@ -1,0 +1,34 @@
+A#include <stdio.h>
+A#include <conio.h>
+A#define MAXLINE 20
+A
+Lfun(char *pstr[6])
+Hvoid fun(char *pstr[6])
+A { int i, j;
+A   char *p;
+A
+A   for(i=0; i<5; i++)
+A    { for(j=i+1; j<6; j++)
+L       { if(strcmp(*(pstr+i), pstr+j)>0)
+H       { if(strcmp(*(pstr+i), *(pstr+j))>0)
+A           { p = *(pstr+i);
+L             *(pstr+i) = pstr+j;
+H             *(pstr+i) = *(pstr+j);
+A             *(pstr+j) = p;
+A           }
+A       }
+A    }
+A }
+A
+Amain()
+A { int i;
+A   char *pstr[6], str[6][MAXLINE];
+A
+A   clrscr();
+A   for(i=0; i<6; i++)   pstr[i] = str[i];
+A   printf("\nEnter 6 string(1 string at each line); \n");
+A   for(i=0; i<6; i++)  scanf("%s", pstr[i]);
+A   fun(pstr);
+A   printf("The strings after sorting:\n");
+A   for(i=0; i<6; i++)  printf("%s\n", pstr[i]);
+A }

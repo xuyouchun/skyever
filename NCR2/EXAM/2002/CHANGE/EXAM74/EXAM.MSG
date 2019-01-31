@@ -1,0 +1,26 @@
+A#include "stdio.h"
+A#include "string.h"
+A
+A#define N  80
+Avoid insert(char *aa)
+A { int i, j, n;  char ch;
+A   n = strlen(aa);
+A   for(i=1; i<n; i++)
+L    { c = aa[i];
+H    { ch = aa[i];
+A      j = i-1;
+A      while((j>=0) && (ch<aa[j]))
+A       { aa[j+1] = aa[j];
+A         j --;
+A       }
+A      aa[j+1] = ch;
+A    }
+A }
+A
+Amain()
+A { char a[N] = "QWERTYUIOPASDFGHJKLMNBVCXZ";
+A   int i;
+A   printf("The original string :   %s\n", a);
+A   insert(a);
+A   printf("The string after sorting : %s\n\n", a);
+A }

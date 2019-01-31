@@ -1,0 +1,23 @@
+A
+A#include <conio.h>
+A#define LEN 20
+A
+Avoid fun(char a[], char b[], int n)
+A {
+H   int k, i=0;
+H   for(k=0; k<=strlen(a); k++)
+H     if(k!=n)  b[i++] = a[k];
+A }
+A
+Amain()
+A { char str1[LEN], str2[LEN];
+A   int n;
+A
+A   clrscr();
+A   printf("Enter the string:\n");
+A   gets(str1);
+A   printf("Enter the position of the string deleted:");
+A   scanf("%d", &n);
+A   fun(str1, str2, n);
+A   printf("The new string is: %s\n", str2);
+A }

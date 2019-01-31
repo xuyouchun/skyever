@@ -1,0 +1,24 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+Avoid fun(char *tt, int pp[])
+A {
+H   int k;
+H   for(k=0; k<26; k++)  pp[k] = 0;
+H   for(k=0; k<strlen(tt); k++)
+H     if(tt[k]<='z' && tt[k]>='a')
+H       pp[tt[k]-'a'] ++;
+A
+A }
+A
+Amain()
+A { char aa[1000];
+A   int bb[26], k, n;
+A
+A   clrscr();
+A   printf("\nPlease enter a char string:");  scanf("%s", aa);
+A   fun(aa, bb);
+A   for(k=0; k<26; k++)  printf("%d ", bb[k]);
+A   printf("\n");
+A }

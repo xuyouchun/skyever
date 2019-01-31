@@ -1,0 +1,16 @@
+A#include <conio.h>
+A#include <math.h>
+A#include <stdio.h>
+A
+Adouble fun(int n)
+A {
+H   int sum = 0, k;
+H   for(k=1; k<n; k++)
+H     if(k%3==0 && k%7==0)  sum += k;
+H   return sqrt(sum);
+A }
+A
+Amain()
+A { clrscr();
+A   printf("s=%f\n", fun(1000));
+A }

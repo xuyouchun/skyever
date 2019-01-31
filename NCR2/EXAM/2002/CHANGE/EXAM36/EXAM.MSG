@@ -1,0 +1,24 @@
+A#include <stdio.h>
+Afun(int x, int y, int z)
+A { int j, t, n, m;
+L   j = 0;
+H   j = 1;
+A   t = j%x;
+A   m = t%y;
+A   n = j%z;
+A   while(t!=0 || m!=0 || n!=0)
+A     { j = j+1;
+A       t = j%x;
+A       m = t%y;
+A       n = j%z;
+A     }
+A   return j;
+A }
+A
+Amain()
+A { int x1, x2, x3, j;
+A   printf("Input x1, x2, x3: ");  scanf("%d%d%d", &x1, &x2, &x3);
+A   printf("x1=%d, x2=%d, x3=%d\n", x1, x2, x3);
+A   j = fun(x1, x2, x3);
+A   printf("The minimal common multiple is : %d\n", j);
+A }

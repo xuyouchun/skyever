@@ -1,0 +1,23 @@
+A#include <conio.h>
+A#include <stdio.h>
+LIsPrime(int n);
+HIsPrime(int n)
+A { int i, m;
+A   m = 1;
+A   for(i=2; i<n; i++)
+L    if!(n%i)
+H    if(!(n%i))
+A     {  m = 0;  break; }
+A   return (m);
+A }
+A
+Amain()
+A { int j, k;
+A   clrscr();
+A   printf("\nPlease enter an integer number between 2 and 10000:");
+A   scanf("%d", &k);
+A   printf("\n\nThe prime factor(s) of %d is(are):", k);
+A   for(j=2; j<=k; j++)
+A     if((!(k%j))&&(IsPrime(j)))  printf("\n%4d", j);
+A   printf("\n");
+A }

@@ -1,0 +1,22 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Aint fun(float x[], int n)
+L   int j, c=0;
+H { int j, c=0;
+A   float xa = 0.0;
+A   for(j=0; j<n; j++)
+A     xa += x[j]/n;
+A   printf("ave = %f\n", xa);
+A   for(j=0; j<n; j++)
+A     if(x[j]>=xa)
+A       c ++;
+A   return c;
+A }
+A
+Amain()
+A { float x[100] = { 193.199, 195.673, 195.757, 196.051, 196.092,
+A                    196.596, 196.597, 196.763 };
+A   clrscr();
+A   printf("%d\n", fun(x, 8));
+A }

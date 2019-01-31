@@ -1,0 +1,24 @@
+A#include <stdio.h>
+A#include <conio.h>
+A
+Avoid fun(char p1[], char p2[])
+A {
+H   char *ptr1 = p1, *ptr2 = p2;
+H   while(*ptr1++);
+H   ptr1 --;
+H   while(*ptr1++ = *ptr2++);
+A }
+A
+Amain()
+A { char s1[80], s2[40];
+A
+A   clrscr();
+A   printf("Enter s1 and s2: \n");
+A   scanf("%s%s", s1, s2);
+A   printf("s1=%s\n", s1);
+A   printf("s2=%s\n", s2);
+A   printf("Invoke fun(s1, s2):\n");
+A   fun(s1, s2);
+A   printf("After invoking: \n");
+A   printf("%s\n", s1);
+A }

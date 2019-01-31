@@ -1,0 +1,19 @@
+A#include <stdio.h>
+Avoid fun(float *p, float *q, float *s)
+L { float *k;
+H { float  k;
+A   if(*p<*q)
+A    { k = *p;  *p = *q;  *q = k; }
+A   if(*p<*s)
+A    { k = *p;  *p = *s;  *s = k; }
+A   if(*q<*s)
+A    { k = *q;  *q = *s;  *s = k; }
+A }
+A
+Amain()
+A { float a, b, c;
+A   printf("Input a b c  ");  scanf("%f%f%f", &a, &b, &c);
+A   printf("a = %4.1f, b = %4.1f, c = %4.1f\n\n", a, b, c);
+A   fun(&a, &b, &c);
+A   printf("a = %4.1f, b = %4.1f, c = %4.1f\n\n", a, b, c);
+A }

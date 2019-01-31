@@ -1,0 +1,19 @@
+A#include <stdio.h>
+Achar *fun(char *s, char *t)
+A {
+H   int len1=0, len2=0;
+H   while(s[len1]!='\0')  len1 ++;
+H   while(t[len2]!='\0')  len2 ++;
+H   if(len2>len1)  return t;
+H   else return s;
+A }
+A
+Amain()
+A { char a[20], b[10], *p, *q;
+A   int i;
+A   printf("Input 1th string:");
+A   gets(a);
+A   printf("Input 2th string:");
+A   gets(b);
+A   printf("%s\n", fun(a, b));
+A }

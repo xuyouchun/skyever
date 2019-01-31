@@ -1,0 +1,21 @@
+A#include <conio.h>
+A#include <math.h>
+A#include <stdio.h>
+A
+Aint fun(int t)
+A {
+H   int x0, x1=1, sum=1, T;
+H   while(sum<t)
+H    { sum += x1;
+H      T = x0;
+H      x0 = x1;
+H      x1 = T+x0;
+H    }
+A }
+A
+Amain()
+A { int n;
+A   clrscr();  n = 1000;
+A   printf("n = %d, f = %d\n", n, fun(n));
+A }
+A

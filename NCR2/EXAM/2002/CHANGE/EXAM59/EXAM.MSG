@@ -1,0 +1,31 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Lfun(char *s, int num[5])
+Hvoid fun(char *s, int num[5])
+A { int k, i=5;
+A   for(k=0; k<i; k++)
+L     num[i] = 0;
+H     num[k] = 0;
+A   for(; *s; s++)
+A    { i = -1;
+L      switch(s)
+H      switch(*s)
+A       { case 'a': case 'A': { i = 0;  break; }
+A         case 'e': case 'E': { i = 1;  break; }
+A         case 'i': case 'I': { i = 2;  break; }
+A         case 'o': case 'O': { i = 3;  break; }
+A         case 'u': case 'U': { i = 4;  break; }
+A       }
+A      if(i>=0)
+A        num[i] ++;
+A    }
+A }
+A
+Amain()
+A { char s1[81];   int num1[5], i;
+A   clrscr();
+A   printf("\nPlease enter a string: ");  gets(s1);
+A   fun(s1, num1);
+A   for(i=0; i<5; i++)  printf("%d  ", num1[i]);  printf("\n");
+A }

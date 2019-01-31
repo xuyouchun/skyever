@@ -1,0 +1,19 @@
+A#include <stdio.h>
+A#include <conio.h>
+Afloat fun(float h)
+A {
+H   h += 0.005;
+H   h *= 100;
+H   h =  (int)h;
+H   h /= 100;
+H   return h;
+A }
+A
+Amain()
+A { float a;
+A   clrscr();
+A   printf("Enter a:  ");  scanf("%f", &a);
+A   printf("The original data is :  ");
+A   printf("%f \n\n", a);
+A   printf("The result : %f\n", fun(a));
+A }

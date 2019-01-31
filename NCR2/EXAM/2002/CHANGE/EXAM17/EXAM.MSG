@@ -1,0 +1,19 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Aint fun(int k)
+A { int m=0, mc=0, j;
+A   while( (k>=2) && (mc<10))
+L     { if((k%13==0) || (k%17=0))
+H     { if((k%13==0) || (k%17==0))
+A         { m = m+k;  mc++; }
+A       k --;
+A     }
+A   return m;
+L  ________
+H }
+A
+Amain()
+A { clrscr();
+A   printf("%d\n", fun(500));
+A }

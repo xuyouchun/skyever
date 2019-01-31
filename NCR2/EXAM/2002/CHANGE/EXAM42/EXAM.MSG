@@ -1,0 +1,22 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A#define N  80
+A
+Avoid fun(char *s, char t[])
+A { int i, j=0;
+A   for(i=0; i<strlen(s); i++)
+L   if(i%2 && s[i]%2==0)
+H   if(i%2!=0 || s[i]%2==0)
+A     t[j++] = s[i];
+L   t[i] = '\0';
+H   t[j] = '\0';
+A }
+A
+Amain()
+A { char s[N], t[N];
+A   clrscr();
+A   printf("\nPlease enter string s :");  gets(s);
+A   fun(s, t);
+A   printf("\nThe result is : %s\n", t);
+A }

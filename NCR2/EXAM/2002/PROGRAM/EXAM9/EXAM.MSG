@@ -1,0 +1,18 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Afloat fun(int m, int n)
+A {
+H   int k;
+H   float M=1.0, N=1.0, M_N=1.0;
+H   for(k=1; k<=m; k++)  M *= (float)k;
+H   for(k=1; k<=n; k++)  N *= (float)k;
+H   for(k=1; k<=m-n; k++) M_N *= (float)k;
+H   return  M/(N*M_N);
+A
+A }
+A
+Amain()
+A { clrscr();
+A   printf("P=%f\n", fun(12, 8));
+A }

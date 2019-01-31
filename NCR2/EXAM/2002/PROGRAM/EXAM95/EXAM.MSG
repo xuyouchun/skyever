@@ -1,0 +1,20 @@
+A#include <stdio.h>
+A#include <conio.h>
+A
+Avoid fun(char *a, int n)
+A {
+H   int K=0;  char *ptr = a;
+H   while(*ptr++=='*')  K ++;
+H   if(n>=K)  return;
+H   ptr = a;
+H   while(*ptr++ = *(ptr+K-n));
+A }
+A
+A
+Amain()
+A { char s[81]; int n;
+A   printf("Enter a string:\n");  gets(s);
+A   printf("Enter n:  ");  scanf("%d", &n);
+A   fun(s, n);
+A   printf("The string after deleted:\n"); puts(s);
+A }

@@ -1,0 +1,26 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Avoid fun(char t[])
+A { char c;
+A   int i, j;
+L   for(i=strlen(t); i; i--)
+H   for(i=strlen(t)-1; i>=0; i--)
+A     for(j=0; j<i; j++)
+L       if(t[j]<t[j+1])
+H       if(t[j]>t[i])
+A         { c = t[j];
+A           t[j] = t[i];
+A           t[i] = c;
+A         }
+A }
+A
+Amain()
+A { char s[81];
+A   clrscr();
+A   printf("\nPlease enter a character string: ");
+A   gets(s);
+A   printf("\n\nBefore sorting: \n%s\"", s);
+A   fun(s);
+A   printf("\nAfter sorting decedingly: \n \"%s\"", s);
+A }

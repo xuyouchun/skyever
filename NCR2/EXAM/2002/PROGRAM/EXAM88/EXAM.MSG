@@ -1,0 +1,17 @@
+A#include <stdio.h>
+A#include <conio.h>
+A
+Avoid fun(char *a)
+A {
+H   char *ptr = a;
+H   while(*ptr)  ptr ++;
+H   while(*--ptr=='*');
+H   *(ptr+1) = '\0';
+A }
+A
+Amain()
+A { char s[81];
+A   printf("Enter a string:\n");  gets(s);
+A   fun(s);
+A   printf("The string after deleted:\n");  puts(s);
+A }

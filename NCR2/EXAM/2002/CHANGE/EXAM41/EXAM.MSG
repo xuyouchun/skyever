@@ -1,0 +1,59 @@
+A#include <stdio.h>
+A#include <conio.h>
+A#include <stdlib.h>
+A
+Atypedef struct aa
+A { int data; struct aa *next; } NODE;
+A
+Aint fun(NODE *h)
+A { int sum = 0;
+A   NODE *p;
+A   p = h;
+A   while(p)
+A    { if(p->data%2==0)
+A      sum += p->data;
+L        p = h->next;
+H      p = p->next;
+A    }
+A   return sum;
+A }
+A
+ANODE *creatlink(int n)
+A { NODE *h, *p, *s, *q;
+A   int i, x;
+A   h = p = (NODE*)malloc(sizeof(NODE));
+A   for(i=1; i<=n; i++)
+A    { s = (NODE*)malloc(sizeof(NODE));
+A      s->data = rand()%16;
+A      s->next = p->next;
+A      p->next = s;
+A      p = p->next;
+A    }
+A   p->next = NULL;
+A   return h;
+A }
+A
+Aoutlink(NODE *h, FILE *pf)
+A { NODE *p;
+A   p = h->next;
+A   fprintf(pf, "\n\nTHE LIST :\n\n  HEAD ");
+A   while(p)
+A    { fprintf(pf, "->%d", p->data);  p = p->next;
+A    }
+A   fprintf(pf, "\n");
+A }
+A
+Aoutresult(int s, FILE *pf)
+A { fprintf(pf, "\nThe sum of even numbers : %d\n", s); }
+A
+Amain()
+A { NODE *head;  int even;
+A   clrscr();
+A   head = creatlink(12);
+A   head->data = 9000;
+A   outlink(head, stdout);
+A   even = fun(head);
+A   printf("\nThe result : \n");  outresult(even, stdout);
+A }
+A
+A

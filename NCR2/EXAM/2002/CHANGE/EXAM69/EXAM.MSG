@@ -1,0 +1,23 @@
+A#include <ctype.h>
+A#include <string.h>
+A#include <stdio.h>
+A
+Lupfst(char p)
+Hvoid upfst(char *p)
+A { int k = 0;
+A   for(; *p; p++)
+A    if(k)
+A     { if(*p==' ')  k = 0; }
+A    else if(*p!=' ')
+A     { k = 1; *p = toupper(*p); }
+A }
+A
+Amain()
+A { char chrstr[81];
+A   clrscr();
+A   printf("\nPleas ener an English text line: ");  gets(chrstr);
+A   printf("\n\nBefore changing:\n  %s", chrstr);
+A   upfst(chrstr);
+A   printf("\nAfter changing:\n %s\n", chrstr);
+A }
+A

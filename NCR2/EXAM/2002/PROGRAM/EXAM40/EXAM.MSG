@@ -1,0 +1,24 @@
+A#include <stdio.h>
+A#include <string.h>
+A
+A#define N 80
+A
+Avoid fun(char *w, int m)
+A {
+H   char b[80]; int i, j=0;
+H   char *ptr = w;
+H   for(i=0; i<m; i++)  b[i] = w[i];
+H   while(*ptr++ = *(ptr+m) );
+H   ptr --;
+H   for(i=0; i<m; i++)  *ptr++ = b[j++];
+A }
+A
+Amain()
+A { char a[N] = "ABCDEFGHIJK";
+A   int m;
+A   printf("The original string:\n");  puts(a);
+A   printf("\n\nEnter m:  ");  scanf("%d", &m);
+A   fun(a, m);
+A   printf("\n\nThe string after moving:\n");  puts(a);
+A   printf("\n\n");
+A }

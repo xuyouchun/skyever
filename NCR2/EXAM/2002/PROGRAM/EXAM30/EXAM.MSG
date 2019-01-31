@@ -1,0 +1,15 @@
+A#include  <stdio.h>
+A#define  M 4
+Afun(int a[][M])
+A {
+H   int i, j, max=0xffff;
+H   for(j=0; j<2; j++)
+H     for(i=0; i<M; i++)
+H       if(a[j][i]>max)  max = a[j][i];
+H   return max;
+A }
+A
+Amain()
+A { int arr[2][M]= { 5, 8, 3, 45, 76, -4, 12, 82 };
+A   printf("max = %d\n", fun(arr));
+A }

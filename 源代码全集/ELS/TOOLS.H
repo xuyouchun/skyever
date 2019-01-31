@@ -1,0 +1,14 @@
+void  tx_fk(int x, int y, int color);
+void  tx_els(int x, int y, int fk, int round, int color);
+int   deal_tx(int dx, int dy, int round);
+int   ideal(int dx, int dy, int round);
+void  addinbj(), accept();
+void  round_case(), renew();
+void  end_deal();
+int   readx(int F, int R, int code), ready(int F, int R, int code);
+void  show_left_els(int, int);
+void  far  _outtextxy(int x, int y, char *format, ...);
+char  *_mktime(long time);
+void  show_str(int,int,int,char*);
+void  face(int cmd); int Ispace();
+int   show_menu(int num, ...);

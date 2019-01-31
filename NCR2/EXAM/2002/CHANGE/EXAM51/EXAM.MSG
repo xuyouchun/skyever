@@ -1,0 +1,29 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+Lint fun(char str[][10], int m, char *pt)
+Hvoid fun(char str[][10], int m, char *pt)
+A { int k, q, i;
+A   for(k=0; k<m; k++)
+A     { q = strlen(str[k]);
+A       for(i=0; i<q; i++)
+L         pt[i] = str[k,i];
+H         pt[i] = str[k][i];
+A       pt += q;
+A       pt[0] = 0;
+A     }
+A }
+A
+Amain()
+A { int m, h;
+A   char s[10][10], p[120];
+A   clrscr();
+A   printf("\nPleae enter m:");
+A   scanf("%d", &m);  gets(s[0]);
+A   printf("\nPlease enter %d string:\n", m);
+A   for(h=0; h<m; h++)  gets(s[h]);
+A   fun(s, m, p);
+A   printf("\nThe result is: %s\n", p);
+A }
+A

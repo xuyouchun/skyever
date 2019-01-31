@@ -1,0 +1,26 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Avoid fun(int m, int *k, int xx[])
+A {
+H   int K; *k=0;
+H   for(K=3; K<m; K++)
+H     { int i;
+H       for(i=2; i<K; i++)
+H         if(K%i==0)  break;
+H       if(i!=K)  xx[(*k)++] = K;
+H     }
+A }
+A
+A
+Amain()
+A { int m, n, zz[100];
+A   clrscr();
+A   printf("\nPlease enter an integer number between 10 and 100: ");
+A   scanf("%d", &n);
+A   fun(n, &m, zz);
+A   printf("\n\nThere are %d non-prime numbers less than %d:", m, n);
+A   for(n=0; n<m; n++)   printf("\n %4d", zz[n]);
+A }
+A
+A

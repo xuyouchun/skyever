@@ -1,0 +1,23 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+Avoid fun(char *s, char t[])
+A {
+A   char *ptr = s;
+A   int k = 0;
+A   while(*ptr)
+A     { if(*ptr%2)
+A         t[k++] = *ptr;
+A       ptr ++;
+A     }
+A   t[k] = '\0';
+A }
+A
+Amain()
+A { char s[100], t[100];
+A   clrscr();
+A   printf("\nPlease enter string S:");  scanf("%s", s);
+A   fun(s, t);
+A   printf("\nThe result is:%s\n", t);
+A }

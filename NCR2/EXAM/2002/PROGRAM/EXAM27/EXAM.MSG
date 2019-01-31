@@ -1,0 +1,22 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+A#define M 100
+A
+Avoid fun(int m, int *a, int *n)
+A {
+H   int k = 0;  *n = 0;
+H   for(k=1; k<=m; k++)
+H     if(k%7==0 || k%13==0)
+H       a[(*n)++] = k;
+A }
+A
+Amain()
+A { int aa[M], n, k;
+A   clrscr();
+A   fun(50, aa, &n);
+A   for(k=0; k<n; k++)
+A     if((k+1)%20==0)  printf("\n");
+A     else printf("%4d", aa[k]);
+A   printf("\n");
+A }

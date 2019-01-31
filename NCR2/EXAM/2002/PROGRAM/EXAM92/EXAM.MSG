@@ -1,0 +1,17 @@
+A#include <conio.h>
+A#include <math.h>
+A#include <stdio.h>
+A
+Adouble fun(int m)
+A {
+H   double sum=0.0;  int k;
+H   for(k=1; k<=m; k++)
+H     sum += log(k);
+H   return sqrt(sum);
+A }
+A
+Amain()
+A { clrscr();
+A   printf("%f\n", fun(20));
+A }
+A

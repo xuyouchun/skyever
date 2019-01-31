@@ -1,0 +1,22 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+Achar *fun(char tt[])
+A { int i;
+A   for(i=0; tt[i]; i++)
+L    if(('a'<=tt[i]) || (tt[i]<='z'))
+H    if(('a'>=tt[i]) || (tt[i]<='z'))
+L      tt[i] += 32;
+H      tt[i] -= 32;
+A   return (tt);
+A }
+A
+Amain()
+A { int i;
+A   char tt[81];
+A   clrscr();
+A   printf("\nPlease enter a string:");
+A   gets(tt);
+A   printf("\nThe result string is:\n%s", fun(tt));
+A }

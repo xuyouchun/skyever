@@ -1,0 +1,15 @@
+A#include <stdio.h>
+A
+Lint fun(int x, int y)
+Hvoid fun(int *x, int *y)
+A { int t;
+L   t = x;  x = y;  y = t;
+H   t = *x;  *x = *y;  *y = t;
+A }
+A
+Amain()
+A { int a, b;
+A   a = 8;  b = 3;
+A   fun(&a, &b);
+A   printf("%d,  %d\n", a, b);
+A }

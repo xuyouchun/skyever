@@ -1,0 +1,27 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Along fun(int a, int n)
+A { int j;
+L   long s = 0, t = 1;
+H   long s = 0, t = 0;
+L   for(j=0; j<n; j++)
+H   for(j=0; j<=n; j++)
+A     t = t*10 + a;
+A   s = t;
+A   for(j=1; j<n; j++)
+L    { t = t%10;
+H    { t = t/10;
+A      s = s - t;
+A    }
+A   return (s);
+A }
+A
+Amain()
+A { int a, n ;
+A   clrscr();
+A   printf("\nPlease enter a and n:");
+A   scanf("%d%d", &a, &n);
+A   printf("The value of function is: %ld\n", fun(a, n));
+A }
+A

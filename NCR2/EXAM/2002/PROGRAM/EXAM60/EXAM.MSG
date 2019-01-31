@@ -1,0 +1,27 @@
+A#include <stdio.h>
+A#define N 80
+Aint fun(int a[], int n)
+A {
+H   int num = n, k;
+H   for(k=0; k<num; k++)
+H    { int i;
+H      for(i=k+1; i<num; i++)
+H        if(a[k]==a[i])
+H          { int j;
+H            for(j=i; j<num-1; j++)
+H              a[j] = a[j+1];
+H            num--;  k --;
+H          }
+H    }
+H   return num;
+A }
+A
+Amain()
+A { int a[N] = { 2, 2, 2, 3, 4, 4, 5, 6, 6, 6, 6, 7, 7, 8, 9, 9, 10, 10, 10 },
+A         i, n = 20;
+A   printf("The original data :\n");
+A   for(i=0; i<n; i++)   printf("%3d", a[i]);
+A   n = fun(a, n);
+A   printf("\n\nThe data after deleted :\n");
+A   for(i=0; i<n; i++)  printf("%3d", a[i]);  printf("\n\n");
+A }

@@ -1,0 +1,20 @@
+A#include <stdio.h>
+Aint fun()
+A { int a[3][3], sum;
+A   int i, j;
+L   ________;
+H   sum = 0;
+A   for(i=0; i<3; i++)
+A    { for(j=0; j<3; j++)
+L        scanf("%d", a[i][j]);
+H        scanf("%d", &a[i][j]);
+A    }
+A   for(i=0; i<3; i++)
+L     sum = sum+a[i][j];
+H     sum = sum+a[i][i];
+A   printf("Sum=%d\n", sum);
+A }
+A
+Amain()
+A { fun();
+A }

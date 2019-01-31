@@ -1,0 +1,20 @@
+A#include <stdio.h>
+A#include <conio.h>
+A
+Adouble fun(int n)
+A { double result = 1.0;
+L   if n==0
+H   if(n==0)
+A     return 1.0;
+A   while(n>1 && n<170)
+L     result *= n--
+H     result *= n--;
+A   return result;
+A }
+A
+Amain()
+A { int n;
+A   printf("Input N:");
+A   scanf("%d", &n);
+A   printf("\n\n%d!=%lf\n\n", n, fun(n));
+A }

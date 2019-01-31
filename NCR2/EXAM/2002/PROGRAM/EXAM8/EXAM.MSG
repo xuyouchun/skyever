@@ -1,0 +1,26 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+Afloat fun(int n)
+A {
+H   float s = 0.0;
+H   int k;
+H   for(k=1; k<=n; k++)
+H     { float sum = 0;
+H       int i;
+H       for(i=1; i<=k; i++)  sum += (float)i;
+H       s += 1.0/sum;
+H     }
+H   return s;
+A   
+A }
+A
+A
+Amain()
+A { int n;  float s;
+A   clrscr();
+A   printf("\nPlease enter N:");  scanf("%d", &n);
+A   s = fun(n);
+A   printf("the result is: %f\n", s);
+A }

@@ -1,0 +1,20 @@
+A#include <stdio.h>
+A#include <conio.h>
+A
+Along fun(long num)
+L { long k;
+H { long k = 1;
+A   do
+A    { k *= num%10;
+L      num \= 10;
+H      num /= 10;
+A    } while(num);
+A   return (k);
+A }
+A
+Amain()
+A { long n;
+A   clrscr();
+A   printf("\Please Enter a number: ");  scanf("%ld", &n);
+A   printf("\n%ld\n", fun(n));
+A }

@@ -1,0 +1,25 @@
+A#include <stdio.h>
+A#include <math.h>
+A
+Adouble fun(double x[10])
+A {
+H   double x0, sum = 0.0;
+H   int k;
+H   for(k=0; k<10; k++)
+H     sum += x[k];
+H   x0 = sum/10;
+H   sum = 0.0;
+H   for(k=0; k<10; k++)
+H     sum += (x[k]-x0)*(x[k]-x0);
+A   return sqrt(sum/10);
+A }
+A
+Amain()
+A { double s, x[10] = { 95.0, 89.0, 76.0, 65.0, 88.0, 72.0, 85.0, 81.0, 90.0,
+A                        56.0 };
+A   int i;
+A   printf("\nThe original data is :\n");
+A   for(i=0; i<10; i++) printf("%6.1f", x[i]);  printf("\n\n");
+A   s = fun(x);
+A   printf("s=%f\n\n", s);
+A }

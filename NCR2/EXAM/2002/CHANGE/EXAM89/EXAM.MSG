@@ -1,0 +1,19 @@
+A#include <stdio.h>
+Along fun(int x, int y, long *p)
+A { int i;
+A   long t = 1;
+L   for(i=1; i<y; i++)
+H   for(i=1; i<=y; i++)
+A    t = t*x;
+A   *p = t;
+L   t = t/1000;
+H   t = t%1000;
+A   return t;
+A }
+A
+Amain()
+A { long t, r;  int x, y;
+A   printf("\nInput x and y: ");  scanf("%ld%ld", &x, &y);
+A   t = fun(x, y, &r);
+A   printf("\n\nx = %d, y = %d, r = %ld, last = %ld\n\n", x, y, r, t);
+A }

@@ -1,0 +1,23 @@
+A#include <stdio.h>
+A#define N  20
+Aint fun(int n, int *a)
+L { int i, j, k, sum;
+H { int i, j=0, k, sum;
+A   sum = 0;
+A   for(k=3, i=0; i<n; i++, k+=5)
+A    { sum = sum+k;
+L      if(sum%4=2)
+H      if(sum%4==2)
+A        a[j++] = sum;
+A    }
+A   return j;
+A }
+A
+Amain()
+A { int a[N], d, n, i;
+A   printf("\nEnter n (4<n<=50):  ");  scanf("%d", &n);
+A   d = fun(n, a);
+A   printf("\n\nThe result :\n");
+A   for(i=0; i<d; i++)  printf("%6d", a[i]);
+A   printf("\n\n");
+A }

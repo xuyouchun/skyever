@@ -1,0 +1,21 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+Lvoid fun (char s, char t)
+Hvoid fun (char *s, char *t)
+A { int i, d;
+A   d = strlen(s);
+A   for(i=0; i<d; i++)  t[i] = s[i];
+A   for(i=0; i<d; i++)  t[d+i] = s[d-1-i];
+L   t[2*d-1] = '\0';
+H   t[d+i] = '\0';
+A }
+A
+Amain()
+A { char s[100], t[100];
+A   clrscr();
+A   printf("\nPlease enter string S:");  scanf("%s", s);
+A   fun(s, t);
+A   printf("\nThe result is: %s\n", t);
+A }

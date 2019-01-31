@@ -1,0 +1,27 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <math.h>
+A
+Lf(double x)
+Hdouble f(double x)
+A { if(x==0.0 || x==2.0)
+A     return 0.0;
+A   else if(x<0.0)
+A     return (x-1)/(x-2);
+A   else
+A    return (x+1)/(x-2);
+A }
+A
+Adouble fun(int n)
+A { int i; double s = 0.0, y;
+A   for(i=-n; i<=n; i++)
+A     { y = f(1.0*i); s += y; }
+L   return s
+H   return s;
+A }
+A
+Amain()
+A { clrscr();
+A   printf("%f\n", fun(5));
+A }
+A

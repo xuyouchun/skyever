@@ -1,0 +1,28 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Avoid fun(int m, int k, int xx[])
+A {
+H   int i, num=0, N=m+1;
+H   for(i=0; i<k; i++)
+H    { int I, flag = 0;
+H      while(flag==0)
+H       { for(I=2; I<N/2; I++)
+H           if(N%I==0)  break;
+H         if(I==N/2)
+H          { flag = 1;  xx[num++] = N; }
+H         N ++;
+H       }
+H    }
+A }
+A
+Amain()
+A { int m, n, zz[1000];
+A   clrscr();
+A   printf("\nPlease enter two integers:");
+A   scanf("%d%d", &m, &n);
+A   fun(m, n, zz);
+A   for(m=0; m<n; m++)
+A      printf("%d ", zz[m]);
+A   printf("\n");
+A }

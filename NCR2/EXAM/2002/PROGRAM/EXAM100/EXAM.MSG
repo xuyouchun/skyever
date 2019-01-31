@@ -1,0 +1,19 @@
+A#include <math.h>
+A#include <stdio.h>
+A
+Adouble fun(int n)
+A {
+H   int k;  double sum = 0.0, x = 0.0;
+H   for(k=1; k<=n; k++)
+H    { x += sqrt(k);
+H      sum += x;
+H    }
+H   return sum;
+A }
+A
+Amain()
+A { int n;  double s;
+A   printf("\n\nInput n:  ");  scanf("%d", &n);
+A   s = fun(n);
+A   printf("\n\ns = %f\n\n", s);
+A }

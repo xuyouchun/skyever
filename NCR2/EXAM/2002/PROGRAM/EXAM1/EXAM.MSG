@@ -1,0 +1,26 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+Aint fun(int score[], int m, int below[])
+A {
+H   int i, K=0;
+H   double sum=0.0, aver;
+H   for(i=0; i<m; i++)  sum += (double)score[i];
+H   aver = sum / (double)m;
+H   for(i=0; i<m; i++)
+H     if((double)score[i]<aver)
+H        below[K++] = score[i];
+H   return K;
+A
+A }
+A
+Amain()
+A { int i, n, below[9];
+A   int score[9] = { 10, 20, 30, 40, 50, 60, 70, 80, 90 };
+A
+A   clrscr();
+A   n = fun(score, 9, below);
+A   printf("\nBelow the average score are: ");
+A   for(i=0; i<n; i++)  printf("%d ", below[i]);
+A }

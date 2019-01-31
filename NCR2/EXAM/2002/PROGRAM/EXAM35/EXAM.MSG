@@ -1,0 +1,27 @@
+A#include <stdio.h>
+A#include <ctype.h>
+A#include <conio.h>
+A
+Aint fun(char *str)
+A {
+H   char *ptr = str;
+H   while(*ptr)
+H    { if(*ptr==' ')
+H        { char *p = ptr;
+H          while(*p)  *p++ = *(p+1);
+H        }
+H      ptr ++;
+H    }
+A }
+A
+Amain()
+A { char str[81];
+A   int n;
+A
+A   clrscr();
+A   printf("Input a string:");
+A   gets(str);
+A   puts(str);
+A   fun(str);
+A   printf("*** str: %s\n", str);
+A }

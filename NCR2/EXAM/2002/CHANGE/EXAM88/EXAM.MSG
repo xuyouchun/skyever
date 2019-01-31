@@ -1,0 +1,24 @@
+A#include <stdio.h>
+Aint fun()
+A { int i, j, k, sum=0;
+A   printf("\nThe result :\n\n");
+L   for(i=0; i<=3; i++)
+H   for(i=1; i<=3; i++)
+A    { for(j=1; j<=5; j++)
+A       { k = 8-i-j;
+L         if(k>=1 && k<=6)
+H         if(k>=1 && k<=6 && i!=0 && j!=0 || k==0)
+A           { sum = sum+1;
+A             printf("red: %4d  white:%4d  black:%4d\n", i, j, k);
+A           }
+A       }
+A    }
+A   return sum;
+A }
+A
+Amain()
+A { int sum;
+A   sum = fun();
+A   printf("sum = %4d\n\n", sum);
+A }
+A

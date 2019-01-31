@@ -1,0 +1,26 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+A#define M 5
+A
+Lint fun(int n, int xx[][])
+Hint fun(int n, int xx[][M])
+A { int i, j, sum=0;
+A   printf("\nThe %d x %d matrix:\n", M, M);
+A   for(i=0; i<M; i++)
+A    { for(j=0; j<M; j++)
+L        printf("%4f", xx[i][j]);
+H        printf("%4d", xx[i][j]);
+A      printf("\n");
+A    }
+A   for(i=0; i<n; i++)
+A     sum += xx[i][i] + xx[i][n-i-1];
+A   return (sum);
+A }
+A
+Amain()
+A { int aa[M][M] = { { 1, 2, 3, 4, 5 },  { 4, 3, 2, 1, 0 },
+A                  { 6, 7, 8, 9, 0 },  { 9, 8, 7, 6, 5 }, {3, 4, 5, 6, 7 } };
+A   clrscr();
+A   printf("\nThe sum of all elements on 2 diagnals is %d.", fun(M, aa));
+A }

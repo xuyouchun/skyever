@@ -1,0 +1,25 @@
+A#include <stdio.h>
+A#include <math.h>
+A
+Aint fun(int n, int *value)
+A { int d, s, i;
+L   d = 0;  s = 1;
+H   d = 1;  s = 0;
+A   for(i=1; i<=5; i++)   d = d*n;
+A   *value = d;
+A   for(i=1; i<=3; i++)
+A    { s = s+d%10;
+L      s = s/10;
+H      d = d/10;
+A    }
+A   return s;
+A }
+A
+Amain()
+A { int n, sum, v;
+A   do
+A    { printf("\nEnter n(2<n<8):  ");  scanf("%d", &n); }
+A   while(n<=2||n>=8);
+A   sum = fun(n, &v);
+A   printf("\n\nThe result:\n  value = %d  sum = %d\n\n", v, sum);
+A }

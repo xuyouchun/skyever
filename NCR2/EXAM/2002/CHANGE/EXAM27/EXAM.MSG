@@ -1,0 +1,24 @@
+A#include <conio.h>
+A#include <math.h>
+A#include <stdio.h>
+A
+Adouble fun(double eps)
+A { double s, t;   int n = 1;
+A   s = 0.0;
+L   t = 0;
+H   t = 1.0;
+A   while(t>eps)
+A    { s += t;
+A      t = t*n/(2*n+1);
+A      n ++;
+A    }
+L   return (s);
+H   return (2.0*s);
+A }
+A
+Amain()
+A { double x;
+A   printf("\nPlease enter a precision: ");  scanf("%lf", &x);
+A   printf("\neps\%lf, Pi\%lf\n\n", x, fun(x));
+A }
+A

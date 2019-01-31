@@ -1,0 +1,36 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+Lint  fun (char *s, char *t1, char *t2, char *w)
+Hvoid fun (char *s, char *t1, char *t2, char *w)
+A {  int i;  char *p, *r, *a;
+A    strcpy(w, s);
+A    while(*w)
+A     { p = w;  r = t1;
+L       while(r)
+H       while(*r)
+A        if(*r==*p)  { r++;  p++; }
+A        else break;
+A       if(*r=='\0')
+A        { a = w;  r = t2;
+L          while(*r) { *a=*r; a ++; r++  }
+H          while(*r) { *a=*r; a ++; r++; }
+A          w += strlen(t2);
+A        }
+A       else w++;
+A    }
+A }
+A
+Amain()
+A { char s[100], t1[100], t2[100], w[100];
+A   clrscr();
+A   printf("\nPlease enter string S:");     scanf("%s", s);
+A   printf("\nPlease enter substring t1:"); scanf("%s", t1);
+A   printf("\nPlease enter substring t2:"); scanf("%s", t2);
+A   if(strlen(t1)==strlen(t2))
+A    { fun(s, t1, t2, w);
+A      printf("\nThe result is :  %s\n", w);
+A    }
+A   else printf("Error: strlen(t1)!=strlen(t2)\n");
+A }

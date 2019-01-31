@@ -1,0 +1,22 @@
+A#include <conio.h>
+A#include <stdio.h>
+Lvoid fun(long s, long t)
+Hvoid fun(long s, long *t)
+A { long s1=10;
+A   s /= 10;
+A   *t = s%10;
+L   while(s<0)
+H   while(s>0)
+A    { s = s/100;
+A      *t = s%10*s1 + *t;
+A      s1 = s1*10;
+A    }
+A }
+A
+Amain()
+A { long s, t;
+A   clrscr();
+A   printf("\nPlease enter s:");  scanf("%ld", &s);
+A   fun(s, &t);
+A   printf("The result is: %ld", t);
+A }

@@ -1,0 +1,20 @@
+A#include <stdio.h>
+A
+Avoid fun(char *s)
+A { int i, j;
+A   for(i=j=0; s[i]!='\0'; i++)
+A     if(s[i]!='c')
+L       s[j] = s[i];
+H       s[j++] = s[i];
+L   s[i] = '\0';
+H   s[j] = '\0';
+A }
+A
+Amain()
+A { char s[80];
+A   printf("Enter a string:        ");  gets(s);
+A   printf("The original string:   ");  puts(s);
+A   fun(s);
+A   printf("The string after deleted :  ");  puts(s);
+A   printf("\n\n");
+A }

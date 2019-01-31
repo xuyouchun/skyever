@@ -1,0 +1,20 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Avoid fun(int *a, int *n)
+A {
+H   int k;  *n = 0;
+H   for(k=1; k<=1000; k++)
+H    if( (k%7==0 || k%11==0) && !(k%7==0&&k%11==0) )
+H      a[(*n)++] = k;
+A }
+A
+A
+Amain()
+A { int aa[1000], n, k;
+A   clrscr();
+A   fun(aa, &n);
+A   for(k=0; k<n; k++)
+A     if((k+1)%10 == 0)  printf("\n");
+A     else printf("%5d", aa[k]);
+A }

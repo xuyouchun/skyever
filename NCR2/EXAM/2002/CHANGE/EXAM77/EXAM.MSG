@@ -1,0 +1,15 @@
+A#include <stdio.h>
+A
+Lfun(char a)
+Hfun(char *a)
+A { if(*a)
+A    { fun(a+1);
+A      printf("%c", *a);
+A    }
+A }
+A
+Amain()
+A { char s[10]="abcd";
+A   printf("处理字符串=%s\n自理后字符串=", s);
+A   fun(s);  printf("\n");
+A }

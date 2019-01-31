@@ -1,0 +1,22 @@
+A#include <stdio.h>
+A#include <math.h>
+A
+Adouble fun(double x)
+A {
+H   double X=0, X1=1, sum = 1.0;
+H   int K = 0;
+H   while(X1-X>0.000001)
+H    { X = X1;
+H      X1 = X*(0.5-K)*x/(K+1);
+H      sum += X1;
+H      K ++;
+H    }
+H   return sum;
+A }
+A
+Amain()
+A { double x, s;
+A   printf("Input x:  ");  scanf("%lf", &x);
+A   s = fun(x);
+A   printf("s=%f\n", s);
+A }

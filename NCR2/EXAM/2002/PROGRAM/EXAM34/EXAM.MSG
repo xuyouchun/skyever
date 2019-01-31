@@ -1,0 +1,39 @@
+A#include <stdio.h>
+A#define  N 16
+A
+Atypedef struct
+A { char num[10];
+A   int s;
+A } STREC;
+A
+Aint fun(STREC *a, STREC *b)
+A {
+H   int max = 0;
+H   int k, n=0;
+H   for(k=0; k<N; k++)
+H     if(a[k].s>max)  max = a[k].s;
+H   for(k=0; k<N; k++)
+H     if(a[k].s==max)  b[n++] = a[k];
+H   return n;
+A }
+A
+Amain()
+A { STREC s[N] = {{"GA05", 85}, {"GA03", 76}, {"GA02", 69}, {"GA04", 85},
+A                 {"GA01", 91}, {"GA07", 72}, {"GA08", 64}, {"GA06", 87},
+A                 {"GA015", 85}, {"GA013", 91}, {"GA012", 64}, {"GA014", 91},
+A                 {"GA011", 77}, {"GA017", 64}, {"GA018", 64}, {"GA016", 72}
+A                };
+A   STREC h[N];
+A   int i, n; FILE *out;
+A   n = fun(s, h);
+A   printf("The %d highest score :\n", n);
+A   for(i=0; i<n; i++)
+A     printf("%s  %4d\n", h[i].num, h[i].s);
+A   printf("\n");
+A   out = fopen("out15.dat", "w");
+A   fprintf(out, "%d\n", n);
+A   for(i=0; i<n; i++)
+A     fprintf(out, "%4d\n", h[i].s);
+A   fclose(out);
+A }
+A

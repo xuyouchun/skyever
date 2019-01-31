@@ -1,0 +1,28 @@
+A#include <stdio.h>
+A#define N 10
+A
+Lvoid fun(int a[], int m)
+Hint  fun(int a[], int m)
+A { int low=0, high=N-1, mid;
+A   while(low<=high)
+A    { mid = (low+high)/2;
+A      if(m<a[mid])
+A        high = mid-1;
+L      else if(m>=a[mid])
+H      else if(m>a[mid])
+A        low = mid+1;
+A      else return(mid);
+A    }
+A   return (-1);
+A }
+A
+Amain()
+A { int i, a[N] = { -3, 4, 7, 9, 13, 45, 67, 89, 100, 180 }, k, m;
+A
+A   printf("a数组中的数据如下：");
+A   for(i=0; i<N; i++)  printf("%d ", a[i]);
+A   printf("Enter m:");  scanf("%d", &m);
+A   k = fun(a, m);
+A   if(k>=0)  printf("m=%d, index=%d\n", m, k);
+A   else printf("Not be found!\n");
+A }

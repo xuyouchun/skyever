@@ -1,0 +1,20 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+Avoid fun(char *ss)
+A {
+H   int k, len = strlen(ss);
+H   for(k=1; k<len; k+=2)
+H     if(ss[k]<='z' && ss[k]>='a')
+H         ss[k] -= 32;
+A }
+A
+Amain()
+A { char tt[81];
+A   clrscr();
+A   printf("\nPlease enter an strring within 80 characters: \n");
+A   gets(tt);
+A   printf("\n\nAfter changing, the string\n %s", tt);
+A   fun(tt);
+A   printf("\nbecomes\n %s \n", tt);
+A }

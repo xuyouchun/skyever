@@ -1,0 +1,24 @@
+A#include <stdio.h>
+A#define  M  4
+A
+Lvoid fun(int a)
+Hvoid fun(int *a)
+A { int i, j, k, m;
+A   printf("Enter 4 number :");
+A   for(i=0; i<M; i++)  scanf("%d", &a[i]);
+A   printf("\n\nThe result  :\n\n");
+A   for(i=M; i>0; i--)
+A    { k = a[M-1];
+A      for(j=M-1; j>0; j--)
+L        a[j] = a[j+1];
+H        a[j] = a[j-1];
+A      a[0] = k;
+A      for(m=0; m<M; m++)   printf("%d  ", a[m]);
+A      printf("\n");
+A    }
+A }
+A
+Amain()
+A { int a[M];
+A   fun(a);  printf("\n\n");
+A }

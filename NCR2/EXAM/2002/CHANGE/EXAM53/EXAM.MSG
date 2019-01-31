@@ -1,0 +1,18 @@
+A#include <stdio.h>
+A
+Along fun(int g)
+L { switch(g);
+H { switch(g)
+A    { case 0: return 0;
+L      case 1; case 2: return 1;
+H      case 1: case 2: return 1;
+A    }
+A   return (fun(g-1)+fun(g-2));
+A }
+A
+Amain()
+A { long fib;  int n;
+A   printf("Input n:  ");  scanf("%d", &n);  printf("n=%d\n", n);
+A   fib = fun(n);
+A   printf("fib = %d\n\n", fib);
+A }

@@ -1,0 +1,13 @@
+
+    下列给定程序中，fun函数的功能是：将p所指字符串中每个单词的最后一个字母改
+成大写（这里的“单词”是指由隔开的字符串）。例如，若输入：
+
+    I am a strdent to take the examination.
+
+则应输出：
+    I aM A strdenT tO takE thE examinatioN.
+
+    请修改程序中的错误之处，使它能得出正确的结果。
+
+    注意：不要改动main函数，不得删行，也不得更改程序的结构！
+

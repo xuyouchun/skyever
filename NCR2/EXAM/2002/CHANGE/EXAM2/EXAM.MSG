@@ -1,0 +1,24 @@
+A#include <stdio.h>
+A#include <string.h>
+A
+Avoid fun(char *p, char *q, char *c)
+L { int k = 1;
+H { int k = 0;
+L   while(*p!=*q)
+H   while(*p||*q)
+L    { if(*p<*q)  c[k]=*q;
+H    { if(*p<=*q) c[k]=*q;
+A      else       c[k]=*p;
+A      if(*p)  p++;
+A      if(*q)  q++;
+A      k++;
+A    }
+A }
+A
+Amain()
+A { char a[10] = "aBCDeFgH", b[10] = "ABcd", c[80]={'\0'};
+A   fun(a, b, c);
+A   printf("The string a:  ");  puts(a);
+A   printf("The string b:  ");  puts(b);
+A   printf("The result  :  ");  puts(c);
+A }

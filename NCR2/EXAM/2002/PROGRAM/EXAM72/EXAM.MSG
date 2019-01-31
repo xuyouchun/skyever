@@ -1,0 +1,20 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+A
+Avoid fun(char *s, char t[])
+A {
+H   int k, len = strlen(s), K=0;
+H   for(k=1; k<len; k+=2)
+H      t[K++] = s[k];
+H   t[K] = '\0';
+A }
+A
+Amain()
+A { char s[100], t[100];
+A   clrscr();
+A   printf("\nPlease enter string S:");  scanf("%s", s);
+A   fun(s, t);
+A   printf("\nThe result is : %s\n", t);
+A }

@@ -1,0 +1,23 @@
+A#include <math.h>
+A#include <stdio.h>
+Adouble fun(int n)
+A {
+H   double sum = 0.0;
+H   int k;
+H   for(k=3; k<=n; k++)
+H     { int i;
+H       for(i=2; i<=k/2; i++)
+H         if(k%i==0)  break;
+H       if(i==k/2+1)
+H         sum += sqrt(k);
+H     }
+H   return sum;
+A }
+A
+Amain()
+A { int n;  double sum;
+A   printf("\n\nInput n:  ");  scanf("%d", &n);
+A   sum = fun(n);
+A   printf("\n\nsum=%f\n\n", sum);
+A }
+A

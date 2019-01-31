@@ -1,0 +1,58 @@
+A#include <stdio.h>
+A#include <alloc.h>
+A#include <string.h>
+A#include <conio.h>
+A
+A#define  N 10
+Atypedef struct ss
+A { char num[10];
+A   int  s;
+A }  STU;
+A
+ASTU *fun(STU a[], int m)
+A { STU b[N], *t;
+A   int i, j, k;
+L   *t = calloc(sizeof(STU), m);
+H   t = calloc(sizeof(STU), m);
+A   for(i=0; i<N; i++)  b[i] = a[i];
+A   for(k=0; k<m; k++)
+A    { for(i=j=0; i<N; i++)
+A        if(b[i].s > b[j].s)  j = i;
+L      t[k].num = b[j].num;
+H      t[k] = b[j];
+A      t[k].s = b[j].s;
+A      b[j].s = 0;
+A    }
+A   return t;
+A }
+A
+Aoutresult(STU a[], FILE *pf)
+A { int i;
+A   for(i=0; i<N; i++)
+A     fprintf(pf, "No = %s  Mark = %d\n", a[i].num, a[i].s);
+A   fprintf(pf, "\n\n");
+A }
+A
+Amain()
+A { STU a[N] = { { "A01", 81 }, { "A02", 89 }, { "A03", 66 }, { "A04", 87 },
+A                { "A05", 77 }, { "A06", 90 }, { "A07", 79 }, { "A08", 61 },
+A                { "A09", 80 }, { "A10", 71 } };
+A   STU *pOrder;
+A   int i, m;
+A   clrscr();
+A   printf("****** The Original data ******\n");
+A   outresult(a, stdout);
+A   printf("\nGive the number of the students who have better score: ");
+A   scanf("%d", &m);
+A   while(m>10)
+A     { printf("\nGive the number of the students who have better score: ");
+A       scanf("%d", &m);
+A     }
+A   pOrder = fun(a, m);
+A   printf("****** THE RESULT ******\n");
+A   printf("The top : \n");
+A   for(i=0; i<m; i++)
+A     printf("  %s   %d\n", pOrder[i].num,  pOrder[i].s);
+A   free(pOrder);
+A }
+A

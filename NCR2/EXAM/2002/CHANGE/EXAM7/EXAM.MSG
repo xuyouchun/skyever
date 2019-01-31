@@ -1,0 +1,25 @@
+A#include <stdio.h>
+A#define  N 20
+A
+Avoid fun(int a[], int n)
+A { int i, j, t, p;
+A   for(j=0; j<n-1; j++)
+L    { p = j
+H    { p = j;
+A      for(i=j; i<n; i++)
+A        if(a[i]<a[p])
+L           p = j;
+H           p = i;
+A      t = a[p]; a[p] = a[j];  a[j] = t;
+A    }
+A }
+A
+Amain()
+A { int a[N] = { 9, 6, 8, 3, -1 }, i, m = 5;
+A   printf("排序前的数据：");
+A   for(i=0; i<m; i++)  printf("%d ", a[i]);  printf("\n");
+A   fun(a, m);
+A   printf("排序后的数据：");
+A   for(i=0; i<m; i++)  printf("%d ", a[i]);  printf("\n");
+A }
+A

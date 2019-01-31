@@ -1,0 +1,28 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Ldouble fun(char *s,  char *t)
+Hchar * fun(char *s, char *t)
+A { int s1=0, t1=0;  char *ss, *tt;
+A   ss = s;   tt = t;
+A   while(*ss)
+A    { s1++;
+L      (*ss)++;
+H      ss++;
+A    }
+A   while(*tt)
+A    { t1++;
+L      (*tt)++;
+H      tt++;
+A    }
+A   if(t1>s1)  return t;
+A   else       return s;
+A }
+A
+Amain()
+A { char a[80], b[80], *p, *q;  int i;
+A   clrscr();
+A   printf("\nEnter a string :  ");  gets(a);
+A   printf("\nEnter a string again :  ");  gets(b);
+A   printf("\nThe longer is :\n\n\"%s\"\n", fun(a, b));
+A }

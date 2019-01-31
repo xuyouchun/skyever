@@ -1,0 +1,26 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Adouble fun(int x[])
+L { int sum = 0.0;
+H { double sum = 0.0;
+A   int c = 0, i = 0;
+A   while(x[i] != 0)
+A    { if(x[i]>0)
+A       { sum += x[i]; c++; }
+A      i ++;
+A    }
+L  sum \= c;
+H  sum /= c;
+A  return sum;
+A }
+A
+Amain()
+A { int x[100];  int i=0;
+A   clrscr();
+A   printf("\nPlease enter some data (end with 0): ");
+A   do
+A    { scanf("%d", &x[i]);
+A    } while(x[i++]!=0);
+A   printf("%f\n", fun(x));
+A }

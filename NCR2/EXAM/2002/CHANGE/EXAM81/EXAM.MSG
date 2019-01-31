@@ -1,0 +1,19 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Lint fun(int n)
+Hfloat fun(int n)
+A { float A=1;  int i;
+L   for(i=2; i<n; i++)
+H   for(i=2; i<=n; i++)
+A     A = 1.0/(1+A);
+A   return A;
+A }
+A
+Amain()
+A { int n;
+A   clrscr();
+A   printf("\nPLease enter n: ");
+A   scanf("%d", &n);
+A   printf("A%d = %f\n", n, fun(n));
+A }

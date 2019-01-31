@@ -1,0 +1,29 @@
+A#include <stdio.h>
+Lfun(char *p)
+Hvoid fun(char *p)
+A { char max, *q;  int i = 0;
+A   max = p[i];
+A   while(p[i]!=0)
+A    { if(max<p[i])
+A        { max = p[i];
+L          p = q+i;
+H          q = p+i;
+A        }
+A      i ++;
+A    }
+L   while(q<p)
+H   while(q>p)
+A    { *q = *(q-1);
+A      q --;
+A    }
+A   p[0] = max;
+A }
+A
+Amain()
+A { char str[80];
+A   printf("Enter a string: ");  gets(str);
+A   printf("\nThe original string:   "); puts(str);
+A   fun(str);
+A   printf("\nThe string after moving:  ");  puts(str);
+A   printf("\n\n");
+A }

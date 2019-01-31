@@ -1,0 +1,22 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <string.h>
+A
+Avoid fun(char *s, char *t)
+A { int i, s1;
+A   s1 = strlen(s);
+A   for(i=0; i<s1; i++)
+L     t[i] = s[s1-i];
+H     t[i] = s[s1-1-i];
+A   for(i=0; i<s1; i++)
+A     t[s1+i] = s[i];
+A   t[2*s1] = '\0';
+A }
+A
+Amain()
+A { char s[100], t[100];
+A   clrscr();
+A   printf("\nPlease ener string s:");  scanf("%s", s);
+A   fun(s, t);
+A   printf("The result is: %s\n", t);
+A }

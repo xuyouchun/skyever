@@ -1,0 +1,24 @@
+A#include <string.h>
+A#include <stdio.h>
+A#include <ctype.h>
+A
+Afun(char *p)
+A { int i, t;  char c[80];
+A   for(i=0, t=0; p[i]; i++)
+A     if(!isspace(*(p+i)))  c[t++] = p[i];
+L   c[t] = "\0";
+H   c[t] = '\0';
+A   strcpy(p, c);
+A }
+A
+Amain()
+A { char c, s[80];
+A   int i = 0;
+A   printf("Input a string:");
+A   c = getchar();
+A   while(c!='#')
+A    { s[i] = c;  i ++;  c = getchar(); }
+A   s[i] = '\0';
+A   fun(s);
+A   puts(s);
+A }

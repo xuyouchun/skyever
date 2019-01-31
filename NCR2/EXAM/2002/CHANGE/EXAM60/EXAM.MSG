@@ -1,0 +1,23 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Aint fun(int m)
+A { int i, k;
+A   for(i=m+1; ; i++)
+A    { for(k=2; k<i; k++)
+L       if(i%k!=0)
+H       if(i%k==0)
+A         break;
+L       if(k<i)
+H       if(k>=i)
+A         return (i);
+A    }
+A }
+A
+Amain()
+A { int n;
+A   clrscr();
+A   printf("\nPlease enter n: ");
+A   scanf("%d", &n);
+A   printf("%d\n", fun(n));
+A }

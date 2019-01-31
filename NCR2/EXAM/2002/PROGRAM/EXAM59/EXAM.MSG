@@ -1,0 +1,25 @@
+A#include <stdio.h>
+A#define  M  3
+A#define  N  20
+A
+Avoid fun(char a[M][N], char *b)
+A {
+H   char *ptr = b, *ptr0;
+H   int k;
+H   for(k=0; k<M; k++)
+H    { ptr0 = a[k];
+H      while(*ptr++=*ptr0++);
+H      ptr --;
+H    }
+A }
+A
+Amain()
+A { char w[M][N] = { "AAAA", "BBBBBBB", "CC" }, i;
+A   char a[100] = "##################";
+A   printf("The string:\n");
+A   for(i=0; i<M; i++)  puts(w[i]);
+A   printf("\n");
+A   fun(w, a);
+A   printf("The A string:\n");
+A   printf("%s", a);  printf("\n\n");
+A }

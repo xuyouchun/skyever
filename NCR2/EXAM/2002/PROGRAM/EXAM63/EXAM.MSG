@@ -1,0 +1,15 @@
+A#include <stdio.h>
+Aint fun(int n)
+A {
+H   int sum = 0, k;
+H   for(k=2; k<n; k++)
+H     if(n%k==0)  sum += k;
+H   return sum;
+A }
+A
+Amain()
+A { int n, sum;
+A   printf("Input n:  ");  scanf("%d", &n);
+A   sum = fun(n);
+A   printf("Sum = %d\n", sum);
+A }

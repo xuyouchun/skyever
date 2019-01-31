@@ -1,0 +1,26 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Avoid fun(long s, long *t)
+A { int d;
+A   long s1 = 1;
+L   t = 0;
+H   *t = 0;
+A   while(s>0)
+A    { d = s%10;
+L      if(d%2==0)
+H      if(d%2!=0)
+A        { *t = d*s1 + *t;
+A          s1 *= 10;
+A        }
+A      s /= 10;
+A    }
+A }
+A
+Amain()
+A { long s, t;
+A   clrscr();
+A   printf("\nPlease enter s:");  scanf("%ld", &s);
+A   fun(s, &t);
+A   printf("The result is: %ld\n", t);
+A }

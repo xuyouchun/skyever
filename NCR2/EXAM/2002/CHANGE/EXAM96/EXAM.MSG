@@ -1,0 +1,24 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <math.h>
+A
+Lfun(int k)
+Hdouble fun(int k)
+A { int n; float s, w, p, q;
+A   n = 1;
+A   s = 1.0;
+A   while(n<=k)
+A    { w = 2.0*n;
+A      p = w-1.0;
+A      q = w+1.0;
+A      s = s*w*w/p/q;
+A      n ++;
+A    }
+L   return s
+H   return s;
+A }
+A
+Amain()
+A { clrscr();
+A   printf("%f\n", fun(10));
+A }

@@ -1,0 +1,21 @@
+A#include <stdio.h>
+A#define  N 80
+Avoid fun(int *w, int p, int n)
+A {
+H   int b[80], k, i, j=0;
+H   for(k=0; k<=p; k++)   b[k] = w[k];
+H   for(i=0; i<n-p-1; i++)  w[i] = w[i+k];
+H   for(; i<n; i++)  w[i] = b[j++];
+A }
+A
+Amain()
+A { int a[N]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+A   int i, p, n=15;
+A   printf("The original data:\n");
+A   for(i=0; i<n; i++)   printf("%d ", a[i]);
+A   printf("\n\nEnter p:  ");  scanf("%d", &p);
+A   fun(a, p, n);
+A   printf("\nThe data after moving:\n");
+A   for(i=0; i<n; i++)  printf("%3d", a[i]);
+A   printf("\n\n");
+A }

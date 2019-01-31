@@ -1,0 +1,10 @@
+bkcolor = 1
+dirfile = menuset
+filelistnum = 0
+maxfilelistnum = 0
+ifautosave = 1
+ifft = 0
+ifsound = 0
+commandfile = command.txt
+includefile = define.txt
+helpfile = help.txt

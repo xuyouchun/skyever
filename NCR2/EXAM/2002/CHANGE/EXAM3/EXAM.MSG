@@ -1,0 +1,20 @@
+A#include <stdio.h>
+A#include <conio.h>
+Avoid fun(char *s)
+A { int i, j;
+A   for(i=0,j=0; s[i]!='\0'; i++)
+A      if(s[i]>='0' && s[i]<='9')
+L         s[j] = s[i];
+H         s[j++] = s[i];
+L   s[j] = "\0";
+H   s[j] = '\0';
+A }
+A
+Amain()
+A { char item[80];
+A   clrscr();
+A   printf("\nEnter a string : ");  gets(item);
+A   printf("\n\nThe string is : %s\n", item);
+A   fun(item);
+A   printf("\n\nThe string of changing is : %s\n", item);
+A }

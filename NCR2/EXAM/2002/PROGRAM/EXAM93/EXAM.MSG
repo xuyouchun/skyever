@@ -1,0 +1,19 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#include <math.h>
+A
+Adouble fun(double x, int n)
+A {
+H   int k;  double sum = 1.0, X = 1.0;
+H   for(k=1; k<=n; k++)
+H     { X *= x;
+H       X /= k;
+H       sum += X;
+H     }
+H   return sum;
+A }
+A
+Amain()
+A { clrscr();
+A   printf("%f\n", fun(0.3, 10));
+A }

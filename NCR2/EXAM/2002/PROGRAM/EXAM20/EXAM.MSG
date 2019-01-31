@@ -1,0 +1,27 @@
+A#include <stdio.h>
+A#include <conio.h>
+A#define MAX 100
+A
+Aint fun(int lim, int aa[MAX])
+A {
+H   int k, N=0;
+H   for(k=1; k<=lim; k+=2)
+H    { int i=2;
+H      for(i=2; i<k/2; i++)
+H        if(k%i==0)  break;
+H      if(i==k/2)   aa[N++] = k;
+H    }
+H   return N;
+A }
+Amain()
+A { int limit, i, sum;
+A   int aa[MAX];
+A   clrscr();
+A   printf("输入一个整数:");
+A   scanf("%d", &limit);
+A   sum = fun(limit, aa);
+A   for(i=0; i<sum; i++)
+A    { if(i%10==0 && i!=0)  printf("\n");
+A      printf("%5d", aa[i]);
+A    }
+A }

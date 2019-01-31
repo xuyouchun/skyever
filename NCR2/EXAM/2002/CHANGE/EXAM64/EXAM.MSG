@@ -1,0 +1,24 @@
+A#include <stdio.h>
+A#include <ctype.h>
+A
+Achar fun(char c)
+A { if(c>='A' && c<='Z')
+L      c = c-32;
+H      c = c+32;
+A   if(c>='a' && c<='u')
+L      c = c-5;
+H      c = c+5;
+A   else if(c>='v'&&c<='z')
+A      c = c-21;
+A   return c;
+A }
+A
+Amain()
+A { char c1, c2;
+A   printf("\nEnter a letter(A~Z):  ");  c1 = getchar();
+A   if(isupper(c1))
+A     { c2 = fun(c1);
+A       printf("\n\nThe letter \'%c\' change to \'%c\'\n", c1, c2);
+A     }
+A   else printf("\nEnter (A~Z)!\n");
+A }

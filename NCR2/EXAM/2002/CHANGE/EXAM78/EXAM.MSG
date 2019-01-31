@@ -1,0 +1,21 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Aint fun(int m)
+A { int k = 2;
+A   while(k<=m && (m%k))
+L     k ++
+H     k ++;
+L   if(m=k)
+H   if(m==k)
+A     return 1;
+A   else return 0;
+A }
+A
+Amain()
+A { int n;
+A   clrscr();
+A   printf("\nPlease enter n: ");  scanf("%d", &n);
+A   if(fun(n))   printf("YES\n");
+A   else printf("NO!\n");
+A }

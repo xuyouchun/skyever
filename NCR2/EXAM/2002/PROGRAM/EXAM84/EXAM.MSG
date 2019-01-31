@@ -1,0 +1,16 @@
+A#include <conio.h>
+A#include <stdio.h>
+A
+Avoid fun(int a, int b, long *c)
+A {
+H   *c = (b/10)*1000 + (a%10)*100 + (b%10)*10 + (a/10);
+A }
+Amain()
+A { int a, b; long c;
+A   clrscr();
+A   printf("Input a, b: ");
+A   scanf("%d%d", &a, &b);
+A   fun(a, b, &c);
+A   printf("The result is: %ld\n", c);
+A }
+A

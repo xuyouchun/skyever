@@ -1,0 +1,24 @@
+A#include <stdio.h>
+A#include <math.h>
+Adouble funx(double x)
+A { return (2*x*x*x-4*x*x+3*x-6); }
+A
+Adouble fun(double m, double n)
+L { int r;
+H { double r;
+A   r = (m+n)/2;
+L   while(fabs(n-m)<0.001)
+H   while(fabs(n-m)>0.001)
+A    { if(funx(r)*funx(n)<0)  m = r;
+A      else n = r;
+A      r = (m+n)/2;
+A    }
+A   return r;
+A }
+A
+Amain()
+A { double m, n, root;
+A   printf("Enter m n :  \n");  scanf("%lf%lf", &m, &n);
+A   root = fun(m, n);
+A   printf("root = %6.3f\n", root);
+A }

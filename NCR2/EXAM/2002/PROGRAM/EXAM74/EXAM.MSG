@@ -1,0 +1,34 @@
+A#include <stdio.h>
+A#define N 16
+A
+Atypedef struct
+A { char num[10];
+A   int s;
+A }  STREC;
+A
+Aint fun(STREC *a, STREC *b)
+A {
+H   int min = 100;
+H   int k, num=0;
+H   for(k=0; k<N; k++)
+H     if(a[k].s<min)  min = a[k].s;
+H   for(k=0; k<N; k++)
+H     if(a[k].s==min)  b[num++] = a[k];
+H   return num;
+A }
+A
+A
+Amain()
+A { STREC s[N] = { {"GA05",85},  {"GA03",76},  {"GA02",69},  {"GA04",85},
+A                  {"GA01",91},  {"GA07",72},  {"GA08",64},  {"GA06",87},
+A                  {"GA015",85}, {"GA013",91}, {"GA012",64}, {"GA014",91},
+A                  {"GA011",91}, {"GA017",64}, {"GA018",64}, {"GA016",71}
+A                };
+A   STREC h[N];
+A   int i, n;
+A   n = fun(s, h);
+A   printf("The %d lowest score :\n", n);
+A   for(i=0; i<n; i++)
+A     printf("%s  %4d\n", h[i].num, h[i].s);
+A   printf("\n");
+A }

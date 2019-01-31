@@ -1,0 +1,29 @@
+A#include <conio.h>
+A#include <stdio.h>
+A#define  N   20
+A
+Aint fun(float *s, int n, float *aver)
+A { float ave, t = 0.0;
+A   int count = 0, k, i ;
+A   for(k=0; k<n; k++)
+L     t = s[k];
+H     t += s[k];
+A   ave = t/n;
+A   for(i=0; i<n; i++)
+A    if(s[i]<ave)  count++;
+L   *aver = &ave ;
+H   *aver = ave ;
+A   return count;
+A }
+A
+Amain()
+A { float s[30], aver ;
+A   int m, i;
+A
+A   clrscr();
+A   printf("\nPlease enter m:  ");  scanf("%d", &m);
+A   printf("\nPlease enter %d mark :\n", m);
+A   for(i=0; i<m; i++)  scanf("%f", s+i);
+A   printf("\nThe number of students : %d\n", fun(s, m, &aver));
+A   printf("Ave \ %f\n", aver);
+A }

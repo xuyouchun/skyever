@@ -1,0 +1,10 @@
+Bcolor:1
+Color:2
+Round:1
+Step:3
+Kind:7
+Level:0
+Speed:0
+Sound:1
+Time:0
+Pass:10000

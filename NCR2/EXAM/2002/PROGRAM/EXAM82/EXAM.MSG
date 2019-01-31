@@ -1,0 +1,15 @@
+A#include <stdio.h>
+Afloat fun(float *a, int n)
+A {
+H   float sum = 0.0;
+H   int k;
+H   for(k=0; k<n; k++)
+H     sum += a[k];
+H   return sum/n;
+A }
+A
+Amain()
+A { float score[30] = { 90.5, 72, 80, 61.5, 55 }, aver;
+A   aver = fun(score, 5);
+A   printf("\nAverage score is: %5.2f\n", aver);
+A }

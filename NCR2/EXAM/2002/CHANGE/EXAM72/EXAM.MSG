@@ -1,0 +1,22 @@
+A#include <stdio.h>
+A
+Afun(char *str, char *substr)
+A { int i, j, k, num = 0;
+L   for(i=0, str[i], i++)
+H   for(i=0; str[i]; i++)
+A     for(j=0, k=0; substr[k]==str[j]; k++, j++)
+A       if(substr[k+1]=='\0')
+A         { num ++;
+A           break;
+A         }
+A   return num;
+A }
+A
+Amain()
+A { char str[80], substr[80];
+A   printf("Input a string:");
+A   gets(str);
+A   printf("Input a substring:");
+A   gets(substr);
+A   printf("%d\n", fun(str, substr));
+A }

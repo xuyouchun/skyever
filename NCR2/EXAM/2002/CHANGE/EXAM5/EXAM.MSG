@@ -1,0 +1,30 @@
+A#include <stdio.h>
+A#define N 20
+Afun(int *a, int n, int x)
+A { int p=0, i;
+A   a[n] = x;
+A   while(x!=a[p])
+A     p = p+1;
+A   if(p==n)  return -1;
+A   else
+A    { for(i=p; i<n; i++)
+L        a[i+1] = a[i];
+H        a[i] = a[i+1];
+A      return n-1;
+A    }
+A }
+A
+Amain()
+A { int w[N] = { -3, 0, 1, 5, 7, 99, 10, 15, 30, 90 }, x, n, i;
+A   n = 10;
+A   printf("The original dat :\n");
+A   for(i=0; i<n; i++)  printf("%5d", w[i]);
+A   printf("\nInput x (to delete): "); scanf("%d", &x);
+A   printf("Delete : %d\n", x);
+A   n = fun(w, n, x);
+A   if(n==-1)  printf("***Not be found!***\n\n");
+A   else
+A    { printf("The data after deleted:\n");
+A      for(i=0; i<n; i++)  printf("%5d", w[i]); printf("\n\n");
+A    }
+A }

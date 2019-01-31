@@ -1,0 +1,30 @@
+A#include <stdio.h>
+A#include <conio.h>
+A#include <stdlib.h>
+A
+A#define N 5
+A
+Aint fun(int a[][N])
+A {
+H   int i, j;
+H   for(j=0; j<N; j++)
+H     for(i=0; i<N; i++)
+H       if(j>=i)  a[j][i] = 0;
+A }
+A
+Amain()
+A { int a[N][N], i, j;
+A   clrscr();
+A   printf("***** The array *****\n");
+A   for(i=0; i<N; i++)
+A    { for(j=0; j<N; j++)
+A       { a[i][j] = rand()%10;  printf("%4d", a[i][j]); }
+A      printf("\n");
+A    }
+A   fun(a);
+A   printf("The Result\n");
+A   for(i=0; i<N; i++)
+A    { for(j=0; j<N; j++)  printf("%4d", a[i][j]);
+A      printf("\n");
+A    }
+A }

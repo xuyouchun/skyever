@@ -1,0 +1,18 @@
+A#incldue <conio.h>
+A#include <stdio.h>
+A
+Aint fun(int *x, int y)
+A { int t;
+L   t = x;  x = y;
+H   t = *x; *x = y;
+L   return (y);
+H   return (t);
+A }
+A
+Amain()
+A { int a = 3, b = 8;
+A   clrscr();
+A   printf("%d  %d\n", a, b);
+A   b = fun(&a, b);
+A   printf("%d  %d\n", a, b);
+A }

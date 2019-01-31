@@ -1,0 +1,21 @@
+A#include <string.h>
+A#include <conio.h>
+A#include <stdio.h>
+A#define N 81
+Afun(char *s)
+A {
+H   int k = 0, L=strlen(s);
+H   for(k=0; k<L/2; k++)
+H     { char ch = s[k]; s[k] = s[L-k-1];  s[L-k-1] = ch; }
+A }
+A
+Amain()
+A { char a[N];
+A   clrscr();
+A   printf("Enter a string :  ");  gets(a);
+A   printf("The original string is :  ");  puts(a);
+A   fun(a);
+A   printf("\n");
+A   printf("The string after modified :  ");
+A   puts(a);
+A }

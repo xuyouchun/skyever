@@ -1,0 +1,17 @@
+A#include <stdio.h>
+Lfun(n)
+Hfun(int n)
+A { int c;
+L   if(n=1)
+H   if(n==1)
+A     c = 10;
+A   else
+A     c = fun(n-1)+2;
+A   return (c);
+A }
+A
+Amain()
+A { int n;
+A   printf("Enter n:  ");  scanf("%d",  &n);
+A   printf("The result : %d\n\n", fun(n));
+A }

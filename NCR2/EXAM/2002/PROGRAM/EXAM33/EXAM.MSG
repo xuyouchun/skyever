@@ -1,0 +1,18 @@
+A#include <stdio.h>
+A#include <conio.h>
+A
+Avoid fun(char *a, int n)
+A {
+H   int k, len = strlen(a);
+H   for(k=len-1; k>=0; k--)
+H     if(a[k]!='*')  break;
+H   a[k+n+1] = '\0';
+A }
+A
+Amain()
+A { char s[81];  int n;
+A   printf("Enter a string:\n");  gets(s);
+A   printf("Enter n:  ");  scanf("%d", &n);
+A   fun(s, n);
+A   printf("The string after deleted: \n");  puts(s);
+A }

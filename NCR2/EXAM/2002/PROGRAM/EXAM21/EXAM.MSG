@@ -1,0 +1,24 @@
+A#include <stdio.h>
+A#include <ctype.h>
+A#include <conio.h>
+A
+Aint fun(char *s, int num)
+A {
+H   int i, j;
+H   for(i=1; i<num-1; i++)
+H     for(j=i+1; j<num-1; j++)
+H       if(s[i]>s[j])
+H         { int t=s[i];
+H           s[i] = s[j];
+H           s[j] = t;
+H         }
+A }
+A
+Amain()
+A { char s[10];
+A   clrscr();
+A   printf("ÊäÈë£·¸ö×Ö·ûµÄ×Ö·û´®:");
+A   gets(s);
+A   fun(s, 7);
+A   printf("\n%s", s);
+A }

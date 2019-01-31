@@ -1,0 +1,21 @@
+A#include <stdio.h>
+A#include <conio.h>
+A
+Avoid fun(char *s, int n, int h, int e)
+A {
+A   int k;
+A   for(k=0; k<n-h-e; k++)   s[k] = s[k+h];
+A   s[n-h-e] = '\0';
+A }
+A
+Amain()
+A { char s[81], *t, *f;  int m=0, tn=0, fn=0;
+A   printf("Enter a string:\n"); gets(s);
+A   t = f = s;
+A   while(*t) { t++;  m++; }
+A   t --;
+A   while(*t=='*') { t--; tn++; }
+A   while(*f=='*') { f++; fn++; }
+A   fun(s, m, fn, tn);
+A   printf("The string after deleted:\n");  puts(s);
+A }

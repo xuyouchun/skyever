@@ -1,0 +1,20 @@
+A#include <stdio.h>
+A#include <conio.h>
+A
+Avoid fun(char *a)
+A {
+H   char *ptr = a;
+H   int K = -1, i;
+H   while(a[++K]=='*');
+H   while(*ptr++ = *(ptr+K));
+H   ptr --;
+H   for(i=0; i<K; i++)  *ptr++ = '*';
+H   *ptr = '\0';
+A }
+A
+Amain()
+A { char s[81], *p; int n=0;
+A   printf("Enter a string:\n");  gets(s);
+A   fun(s);
+A   printf("The string after moveing:\n");  puts(s);
+A }

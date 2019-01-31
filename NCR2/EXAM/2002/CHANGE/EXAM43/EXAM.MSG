@@ -1,0 +1,29 @@
+A#include <stdio.h>
+A#define N 100
+A
+Aint fun(int *s, int n)
+A { int i, j, k, a, b, c;
+A   j = 0;
+A   for(i=100; i<n; i++)
+L    { k = n;
+H    { k = i;
+A      a = k%10;   k /= 10;
+L      b = k%10;   k /= 10;
+H      b = k%10;
+A      c = k/10;
+A      if(a==b && a==c)  s[j++] = i;
+A    }
+A   return j;
+A }
+A
+Amain()
+A { int a[N], n, num=0, i;
+A   do
+A    { printf("\nEnter n(<=1000): ");  scanf("%d", &n); }
+A   while(n>1000);
+A   num = fun(a, n);
+A   printf("\n\nThe result :\n");
+A   for(i=0; i<num; i++)  printf("%5d", a[i]);
+A   printf("\n\n");
+A }
+A

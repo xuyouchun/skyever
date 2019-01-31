@@ -1,0 +1,25 @@
+A#include <stdio.h>
+A#include <ctype.h>
+A#include <conio.h>
+A
+Avoid fun(char *s)
+L { while(*s!='@')
+H { while(*s)
+A    { if(*s>='A' & *s<='Z' || *s>='a'&&*s<='z')
+A       { if(*s=='Z')  *s = 'A';
+A         else if(*s=='z')  *s = 'a';
+A         else *s += 1;
+A       }
+L      (*s)++;
+H      s ++;
+A    }
+A }
+A
+Amain()
+A { char s[80];
+A   clrscr();
+A   printf("\nEnter a scring with length < 80  \n\n");  gets(s);
+A   printf("\nThe string: \n\n");  puts(s);
+A   fun(s);
+A   printf("\n\nThe Cords: \n\n");  puts(s);
+A }

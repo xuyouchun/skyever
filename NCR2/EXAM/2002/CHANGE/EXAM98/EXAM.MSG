@@ -1,0 +1,21 @@
+A#include <stdio.h>
+A#include <math.h>
+L#define  FU(m, n)  (m/n)
+H#define  FU(m, n)  ((m)/(n))
+A
+Afloat fun(float a, float b, float c)
+A { float value;
+A   value = FU(a+b, a-b) + FU(c+b, c-b);
+L   Return (value);
+H   return (value);
+A }
+A
+Amain()
+A { float x, y, z, sum;
+A   printf("Input x, y, z :");
+A   scanf("%f%f%f", &x, &y, &z);
+A   printf("x=%f, y=%f, z=%f\n", x, y, z);
+A   if(x==y || y==z)  { printf("Data error!\n");  exit(0); }
+A   sum = fun(x, y, z);
+A   printf("The result is : %5.2f\n", sum);
+A }
